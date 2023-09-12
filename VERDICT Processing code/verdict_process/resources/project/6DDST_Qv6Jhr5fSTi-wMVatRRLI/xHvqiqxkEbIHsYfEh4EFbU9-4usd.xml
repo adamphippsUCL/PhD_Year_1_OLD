@@ -1,0 +1,946 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Info>
+    <MetadataNode>
+        <path value="ProjectData:type:Info">
+            <node name="Info">
+                <entry value="VERDICT" key="Name"/>
+            </node>
+        </path>
+        <path value="Root:type:Categories">
+            <path value="FileClassCategory:type:Category">
+                <node name="Info">
+                    <entry value="None" key="DataType"/>
+                    <entry value="Classification" key="Name"/>
+                    <entry value="1" key="ReadOnly"/>
+                    <entry value="1" key="SingleValued"/>
+                </node>
+                <path value="artifact:type:Label">
+                    <node name="Info">
+                        <entry value="Artifact" key="Name"/>
+                        <entry value="READ_ONLY" key="ReadOnly"/>
+                    </node>
+                </path>
+                <path value="convenience:type:Label">
+                    <node name="Info">
+                        <entry value="Convenience" key="Name"/>
+                        <entry value="READ_ONLY" key="ReadOnly"/>
+                    </node>
+                </path>
+                <path value="derived:type:Label">
+                    <node name="Info">
+                        <entry value="Derived" key="Name"/>
+                        <entry value="READ_ONLY" key="ReadOnly"/>
+                    </node>
+                </path>
+                <path value="design:type:Label">
+                    <node name="Info">
+                        <entry value="Design" key="Name"/>
+                        <entry value="READ_ONLY" key="ReadOnly"/>
+                    </node>
+                </path>
+                <path value="none:type:Label">
+                    <node name="Info">
+                        <entry value="None" key="Name"/>
+                        <entry value="READ_ONLY" key="ReadOnly"/>
+                    </node>
+                </path>
+                <path value="other:type:Label">
+                    <node name="Info">
+                        <entry value="Other" key="Name"/>
+                        <entry value="READ_ONLY" key="ReadOnly"/>
+                    </node>
+                </path>
+                <path value="test:type:Label">
+                    <node name="Info">
+                        <entry value="Test" key="Name"/>
+                        <entry value="READ_ONLY" key="ReadOnly"/>
+                    </node>
+                </path>
+            </path>
+        </path>
+        <path value="Root:type:EntryPoints">
+            <path value="773b4abc-4204-4672-a4a2-0d3b9b6013de:type:EntryPoint">
+                <node name="Info">
+                    <entry value="utilities/runTheseTests.m" key="File"/>
+                    <entry value="" key="Icon"/>
+                    <entry value="runTheseTests" key="Name"/>
+                    <entry value="Basic" key="Type"/>
+                    <entry value="1" key="Visible"/>
+                </node>
+            </path>
+        </path>
+        <path value="Root:type:Extensions"/>
+        <path value="Root:type:Files">
+            <path value=".gitattributes:type:File">
+                <node name="Info"/>
+            </path>
+            <path value=".gitignore:type:File">
+                <node name="Info"/>
+            </path>
+            <path value="bv2scheme.m:type:File">
+                <node name="Info">
+                    <node name="Category">
+                        <entry value="FileClassCategory" key="UUID"/>
+                        <node name="Label">
+                            <entry value="design" key="UUID"/>
+                        </node>
+                    </node>
+                </node>
+            </path>
+            <path value="explore_VERDICT_signal.m:type:File">
+                <node name="Info">
+                    <node name="Category">
+                        <entry value="FileClassCategory" key="UUID"/>
+                        <node name="Label">
+                            <entry value="design" key="UUID"/>
+                        </node>
+                    </node>
+                </node>
+            </path>
+            <path value="get_VERDICTfiles.m:type:File">
+                <node name="Info">
+                    <node name="Category">
+                        <entry value="FileClassCategory" key="UUID"/>
+                        <node name="Label">
+                            <entry value="design" key="UUID"/>
+                        </node>
+                    </node>
+                </node>
+            </path>
+            <path value="requirements.mlx:type:File">
+                <node name="Info">
+                    <node name="Category">
+                        <entry value="FileClassCategory" key="UUID"/>
+                        <node name="Label">
+                            <entry value="design" key="UUID"/>
+                        </node>
+                    </node>
+                </node>
+            </path>
+            <path value="sim_VERDICT.m:type:File">
+                <node name="Info">
+                    <node name="Category">
+                        <entry value="FileClassCategory" key="UUID"/>
+                        <node name="Label">
+                            <entry value="design" key="UUID"/>
+                        </node>
+                    </node>
+                </node>
+            </path>
+            <path value="source:type:File">
+                <node name="Info"/>
+                <path value="1:type:DIR_SIGNIFIER">
+                    <node name="Info"/>
+                </path>
+                <path value="VERDICT_fit.m:type:File">
+                    <node name="Info">
+                        <node name="Category">
+                            <entry value="FileClassCategory" key="UUID"/>
+                            <node name="Label">
+                                <entry value="design" key="UUID"/>
+                            </node>
+                        </node>
+                    </node>
+                </path>
+                <path value="astrosticks.m:type:File">
+                    <node name="Info">
+                        <node name="Category">
+                            <entry value="FileClassCategory" key="UUID"/>
+                            <node name="Label">
+                                <entry value="design" key="UUID"/>
+                            </node>
+                        </node>
+                    </node>
+                </path>
+                <path value="ball.m:type:File">
+                    <node name="Info">
+                        <node name="Category">
+                            <entry value="FileClassCategory" key="UUID"/>
+                            <node name="Label">
+                                <entry value="design" key="UUID"/>
+                            </node>
+                        </node>
+                    </node>
+                </path>
+                <path value="sphereGPD.m:type:File">
+                    <node name="Info">
+                        <node name="Category">
+                            <entry value="FileClassCategory" key="UUID"/>
+                            <node name="Label">
+                                <entry value="design" key="UUID"/>
+                            </node>
+                        </node>
+                    </node>
+                </path>
+                <path value="stejskal.m:type:File">
+                    <node name="Info">
+                        <node name="Category">
+                            <entry value="FileClassCategory" key="UUID"/>
+                            <node name="Label">
+                                <entry value="design" key="UUID"/>
+                            </node>
+                        </node>
+                    </node>
+                </path>
+            </path>
+            <path value="tests:type:File">
+                <node name="Info"/>
+                <path value="1:type:DIR_SIGNIFIER">
+                    <node name="Info"/>
+                </path>
+                <path value="testastrosticks.m:type:File">
+                    <node name="Info">
+                        <node name="Category">
+                            <entry value="FileClassCategory" key="UUID"/>
+                            <node name="Label">
+                                <entry value="test" key="UUID"/>
+                            </node>
+                        </node>
+                    </node>
+                </path>
+                <path value="testball.m:type:File">
+                    <node name="Info">
+                        <node name="Category">
+                            <entry value="FileClassCategory" key="UUID"/>
+                            <node name="Label">
+                                <entry value="test" key="UUID"/>
+                            </node>
+                        </node>
+                    </node>
+                </path>
+                <path value="testsphereGPD.m:type:File">
+                    <node name="Info">
+                        <node name="Category">
+                            <entry value="FileClassCategory" key="UUID"/>
+                            <node name="Label">
+                                <entry value="test" key="UUID"/>
+                            </node>
+                        </node>
+                    </node>
+                </path>
+                <path value="teststejskal.m:type:File">
+                    <node name="Info">
+                        <node name="Category">
+                            <entry value="FileClassCategory" key="UUID"/>
+                            <node name="Label">
+                                <entry value="test" key="UUID"/>
+                            </node>
+                        </node>
+                    </node>
+                </path>
+            </path>
+            <path value="try_VERDICT.m:type:File">
+                <node name="Info">
+                    <node name="Category">
+                        <entry value="FileClassCategory" key="UUID"/>
+                        <node name="Label">
+                            <entry value="design" key="UUID"/>
+                        </node>
+                    </node>
+                </node>
+            </path>
+            <path value="utilities:type:File">
+                <node name="Info"/>
+                <path value="1:type:DIR_SIGNIFIER">
+                    <node name="Info"/>
+                </path>
+                <path value="runTheseTests.m:type:File">
+                    <node name="Info">
+                        <node name="Category">
+                            <entry value="FileClassCategory" key="UUID"/>
+                            <node name="Label">
+                                <entry value="design" key="UUID"/>
+                            </node>
+                        </node>
+                    </node>
+                </path>
+            </path>
+            <path value="verdict_main.m:type:File">
+                <node name="Info">
+                    <node name="Category">
+                        <entry value="FileClassCategory" key="UUID"/>
+                        <node name="Label">
+                            <entry value="design" key="UUID"/>
+                        </node>
+                    </node>
+                </node>
+            </path>
+        </path>
+        <path value="Root:type:ProjectData"/>
+        <path value="Root:type:ProjectPath">
+            <path value="cf140e1c-6ffd-45b7-b704-7f8100e0ab25:type:Reference">
+                <node name="Info">
+                    <entry value="source" key="Ref"/>
+                    <entry value="Relative" key="Type"/>
+                </node>
+            </path>
+        </path>
+        <path value="Root:type:References">
+            <path value="e12e48fe-0650-4e7f-a623-25c579d745b3:type:Reference">
+                <node name="Info">
+                    <entry value="../DICOM" key="Ref"/>
+                    <entry value="Relative" key="Type"/>
+                </node>
+            </path>
+        </path>
+    </MetadataNode>
+    <Files>
+        <File path=".DS_Store" value="b6326b89"/>
+        <File path=".gitattributes" value="a5e61e3f"/>
+        <File path=".gitignore" value="f1d6875d"/>
+        <File path="VERDICT.prj" value="e0b87f15"/>
+        <File path="bv2scheme.m" value="6e1d5069"/>
+        <File path="explore_VERDICT_signal.m" value="288eceed"/>
+        <File path="get_VERDICTfiles.m" value="da45b7d4"/>
+        <File path="requirements.mlx" value="4fae5b14"/>
+        <File path="resources/project/Abllu374wtDd3IliE-5ZoGpf8mM/_MCXUodwxypf6VADjNZvvspM_gEd.xml" value="fbf03ea7"/>
+        <File path="resources/project/Abllu374wtDd3IliE-5ZoGpf8mM/_MCXUodwxypf6VADjNZvvspM_gEp.xml" value="9bd9d47f"/>
+        <File path="resources/project/Abllu374wtDd3IliE-5ZoGpf8mM/feAB0iKSmURY6NZdQeW8106J6fod.xml" value="317cfbea"/>
+        <File path="resources/project/Abllu374wtDd3IliE-5ZoGpf8mM/feAB0iKSmURY6NZdQeW8106J6fop.xml" value="482d0032"/>
+        <File path="resources/project/Abllu374wtDd3IliE-5ZoGpf8mM" value="-1"/>
+        <File path="resources/project/EEtUlUb-dLAdf0KpMVivaUlztwA/6701QRgijlIb7S6Q6lQxlpQWs30d.xml" value="be9ae8f9"/>
+        <File path="resources/project/EEtUlUb-dLAdf0KpMVivaUlztwA/6701QRgijlIb7S6Q6lQxlpQWs30p.xml" value="6942a32b"/>
+        <File path="resources/project/EEtUlUb-dLAdf0KpMVivaUlztwA" value="-1"/>
+        <File path="resources/project/GNMWgYwxGsjRVtgg-sSVd-xXPJc" value="-1"/>
+        <File path="resources/project/KAXfQgCar2Yb8zOxgvf9hdmLP1E/DDjsDUpVbSwHPL3IzbqMKfToc8sd.xml" value="cc82a2f8"/>
+        <File path="resources/project/KAXfQgCar2Yb8zOxgvf9hdmLP1E/DDjsDUpVbSwHPL3IzbqMKfToc8sp.xml" value="ca1899a6"/>
+        <File path="resources/project/KAXfQgCar2Yb8zOxgvf9hdmLP1E" value="-1"/>
+        <File path="resources/project/KpVHOAtQ0CWxHd2H2QUMNHb0zUo/Cym3lF9MCdLyOz7MA2H3Z_HJ9asd.xml" value="fbf03ea7"/>
+        <File path="resources/project/KpVHOAtQ0CWxHd2H2QUMNHb0zUo/Cym3lF9MCdLyOz7MA2H3Z_HJ9asp.xml" value="9bd9d47f"/>
+        <File path="resources/project/KpVHOAtQ0CWxHd2H2QUMNHb0zUo/G_ZhMGSqsDuQlqOyCj3F8dOLZpod.xml" value="317cfbea"/>
+        <File path="resources/project/KpVHOAtQ0CWxHd2H2QUMNHb0zUo/G_ZhMGSqsDuQlqOyCj3F8dOLZpop.xml" value="c7aabff9"/>
+        <File path="resources/project/KpVHOAtQ0CWxHd2H2QUMNHb0zUo/KQLlIvvX1HZ0igKj42pDkVuRJLwd.xml" value="317cfbea"/>
+        <File path="resources/project/KpVHOAtQ0CWxHd2H2QUMNHb0zUo/KQLlIvvX1HZ0igKj42pDkVuRJLwp.xml" value="5433fd2d"/>
+        <File path="resources/project/KpVHOAtQ0CWxHd2H2QUMNHb0zUo/NaJ70mcvk80PeeJCKvsrtJfXaSEd.xml" value="317cfbea"/>
+        <File path="resources/project/KpVHOAtQ0CWxHd2H2QUMNHb0zUo/NaJ70mcvk80PeeJCKvsrtJfXaSEp.xml" value="d7a5afb4"/>
+        <File path="resources/project/KpVHOAtQ0CWxHd2H2QUMNHb0zUo/Pd8E2u0PMRG98uc77vJREyTs8gEd.xml" value="317cfbea"/>
+        <File path="resources/project/KpVHOAtQ0CWxHd2H2QUMNHb0zUo/Pd8E2u0PMRG98uc77vJREyTs8gEp.xml" value="b0a95682"/>
+        <File path="resources/project/KpVHOAtQ0CWxHd2H2QUMNHb0zUo/vWtltQdxxqZBaSKnBgUEKSrYjdcd.xml" value="317cfbea"/>
+        <File path="resources/project/KpVHOAtQ0CWxHd2H2QUMNHb0zUo/vWtltQdxxqZBaSKnBgUEKSrYjdcp.xml" value="d28cacb3"/>
+        <File path="resources/project/KpVHOAtQ0CWxHd2H2QUMNHb0zUo" value="-1"/>
+        <File path="resources/project/L-FdTjGZoe6xO99CF02AprRWfiw/cluWkMa1NxEw59WiLTospkP_8uAd.xml" value="e868aee5"/>
+        <File path="resources/project/L-FdTjGZoe6xO99CF02AprRWfiw/cluWkMa1NxEw59WiLTospkP_8uAp.xml" value="bf8f2e10"/>
+        <File path="resources/project/L-FdTjGZoe6xO99CF02AprRWfiw" value="-1"/>
+        <File path="resources/project/LUgSFhI3RPozNzNcutxrczVe6f0/L-FdTjGZoe6xO99CF02AprRWfiwd.xml" value="53b342fc"/>
+        <File path="resources/project/LUgSFhI3RPozNzNcutxrczVe6f0/L-FdTjGZoe6xO99CF02AprRWfiwp.xml" value="6246b9f0"/>
+        <File path="resources/project/LUgSFhI3RPozNzNcutxrczVe6f0" value="-1"/>
+        <File path="resources/project/NjSPEMsIuLUyIpr2u1Js5bVPsOs/2kj09UetkV_lru3gvSPXnY6-nM4d.xml" value="eff7b485"/>
+        <File path="resources/project/NjSPEMsIuLUyIpr2u1Js5bVPsOs/2kj09UetkV_lru3gvSPXnY6-nM4p.xml" value="7b002da4"/>
+        <File path="resources/project/NjSPEMsIuLUyIpr2u1Js5bVPsOs/KKyDJtbdIBOlaeHmIZd5VX6vqx8d.xml" value="7716e543"/>
+        <File path="resources/project/NjSPEMsIuLUyIpr2u1Js5bVPsOs/KKyDJtbdIBOlaeHmIZd5VX6vqx8p.xml" value="4cce81bc"/>
+        <File path="resources/project/NjSPEMsIuLUyIpr2u1Js5bVPsOs/QWNDYJD5mGW1bWYvPx9DtKnxzw4d.xml" value="9fa19c1e"/>
+        <File path="resources/project/NjSPEMsIuLUyIpr2u1Js5bVPsOs/QWNDYJD5mGW1bWYvPx9DtKnxzw4p.xml" value="69a90595"/>
+        <File path="resources/project/NjSPEMsIuLUyIpr2u1Js5bVPsOs/R1RggVhA72agIvELiuhWPRS8F0Id.xml" value="4434695f"/>
+        <File path="resources/project/NjSPEMsIuLUyIpr2u1Js5bVPsOs/R1RggVhA72agIvELiuhWPRS8F0Ip.xml" value="435fd6b1"/>
+        <File path="resources/project/NjSPEMsIuLUyIpr2u1Js5bVPsOs/aEHSZBIY-yve10yGis12Zr5DLZod.xml" value="b32f4cc5"/>
+        <File path="resources/project/NjSPEMsIuLUyIpr2u1Js5bVPsOs/aEHSZBIY-yve10yGis12Zr5DLZop.xml" value="9ee37d25"/>
+        <File path="resources/project/NjSPEMsIuLUyIpr2u1Js5bVPsOs/j4xwF_j8iFTVayUMfxLgMnTbencd.xml" value="657f94e3"/>
+        <File path="resources/project/NjSPEMsIuLUyIpr2u1Js5bVPsOs/j4xwF_j8iFTVayUMfxLgMnTbencp.xml" value="a55c6f90"/>
+        <File path="resources/project/NjSPEMsIuLUyIpr2u1Js5bVPsOs/r8LR4nLmg9ai3oHrW1r_-KocQzkd.xml" value="3a808e07"/>
+        <File path="resources/project/NjSPEMsIuLUyIpr2u1Js5bVPsOs/r8LR4nLmg9ai3oHrW1r_-KocQzkp.xml" value="81b62498"/>
+        <File path="resources/project/NjSPEMsIuLUyIpr2u1Js5bVPsOs" value="-1"/>
+        <File path="resources/project/Project.xml" value="afc53f38"/>
+        <File path="resources/project/fjRQtWiSIy7hIlj-Kmk87M7s21k/NjSPEMsIuLUyIpr2u1Js5bVPsOsd.xml" value="d2dc6b71"/>
+        <File path="resources/project/fjRQtWiSIy7hIlj-Kmk87M7s21k/NjSPEMsIuLUyIpr2u1Js5bVPsOsp.xml" value="24933817"/>
+        <File path="resources/project/fjRQtWiSIy7hIlj-Kmk87M7s21k" value="-1"/>
+        <File path="resources/project/hLMKfvmMZYFbdoE4Xco7ryXas6s/2TdSpj1Rlea9jdBPyKJiKVwXgOEd.xml" value="caeb86ce"/>
+        <File path="resources/project/hLMKfvmMZYFbdoE4Xco7ryXas6s/2TdSpj1Rlea9jdBPyKJiKVwXgOEp.xml" value="cda41ed9"/>
+        <File path="resources/project/hLMKfvmMZYFbdoE4Xco7ryXas6s/8N45YNXEL2oray2U2Sq_i6TFgcsd.xml" value="caeb86ce"/>
+        <File path="resources/project/hLMKfvmMZYFbdoE4Xco7ryXas6s/8N45YNXEL2oray2U2Sq_i6TFgcsp.xml" value="ba4ad3b4"/>
+        <File path="resources/project/hLMKfvmMZYFbdoE4Xco7ryXas6s/8Qdz0iiiuHlFJjxB6c5reQ4NAkQd.xml" value="fbf03ea7"/>
+        <File path="resources/project/hLMKfvmMZYFbdoE4Xco7ryXas6s/8Qdz0iiiuHlFJjxB6c5reQ4NAkQp.xml" value="9bd9d47f"/>
+        <File path="resources/project/hLMKfvmMZYFbdoE4Xco7ryXas6s/aSrNR3lT-t6XnbbjweMFKGZl1_gd.xml" value="caeb86ce"/>
+        <File path="resources/project/hLMKfvmMZYFbdoE4Xco7ryXas6s/aSrNR3lT-t6XnbbjweMFKGZl1_gp.xml" value="7a73570"/>
+        <File path="resources/project/hLMKfvmMZYFbdoE4Xco7ryXas6s/kUcBz5c-v_njtYKaywCPgLn8Y7Ad.xml" value="caeb86ce"/>
+        <File path="resources/project/hLMKfvmMZYFbdoE4Xco7ryXas6s/kUcBz5c-v_njtYKaywCPgLn8Y7Ap.xml" value="737607e"/>
+        <File path="resources/project/hLMKfvmMZYFbdoE4Xco7ryXas6s" value="-1"/>
+        <File path="resources/project/qaw0eS1zuuY1ar9TdPn1GMfrjbQ/04PnmaI-lqVCOknAGdRU_1MzEg4d.xml" value="317cfbea"/>
+        <File path="resources/project/qaw0eS1zuuY1ar9TdPn1GMfrjbQ/04PnmaI-lqVCOknAGdRU_1MzEg4p.xml" value="8fdca306"/>
+        <File path="resources/project/qaw0eS1zuuY1ar9TdPn1GMfrjbQ/1wulelI6Zr-dhQlQlPFfSbDAGz8d.xml" value="317cfbea"/>
+        <File path="resources/project/qaw0eS1zuuY1ar9TdPn1GMfrjbQ/1wulelI6Zr-dhQlQlPFfSbDAGz8p.xml" value="92b39057"/>
+        <File path="resources/project/qaw0eS1zuuY1ar9TdPn1GMfrjbQ/Abllu374wtDd3IliE-5ZoGpf8mMd.xml" value="fbf03ea7"/>
+        <File path="resources/project/qaw0eS1zuuY1ar9TdPn1GMfrjbQ/Abllu374wtDd3IliE-5ZoGpf8mMp.xml" value="edc67a56"/>
+        <File path="resources/project/qaw0eS1zuuY1ar9TdPn1GMfrjbQ/KPD-i6GPksax80FSvlkNuJCfRYAd.xml" value="317cfbea"/>
+        <File path="resources/project/qaw0eS1zuuY1ar9TdPn1GMfrjbQ/KPD-i6GPksax80FSvlkNuJCfRYAp.xml" value="dd951f68"/>
+        <File path="resources/project/qaw0eS1zuuY1ar9TdPn1GMfrjbQ/KpVHOAtQ0CWxHd2H2QUMNHb0zUod.xml" value="fbf03ea7"/>
+        <File path="resources/project/qaw0eS1zuuY1ar9TdPn1GMfrjbQ/KpVHOAtQ0CWxHd2H2QUMNHb0zUop.xml" value="dc07c44e"/>
+        <File path="resources/project/qaw0eS1zuuY1ar9TdPn1GMfrjbQ/TMK4UzWHdRLhy_w-CHt9y11Q8XAd.xml" value="fbf03ea7"/>
+        <File path="resources/project/qaw0eS1zuuY1ar9TdPn1GMfrjbQ/TMK4UzWHdRLhy_w-CHt9y11Q8XAp.xml" value="389ac601"/>
+        <File path="resources/project/qaw0eS1zuuY1ar9TdPn1GMfrjbQ/WIKYJ7_ZCKXVAaD5MzzWvDuaY8cd.xml" value="317cfbea"/>
+        <File path="resources/project/qaw0eS1zuuY1ar9TdPn1GMfrjbQ/WIKYJ7_ZCKXVAaD5MzzWvDuaY8cp.xml" value="9cd49671"/>
+        <File path="resources/project/qaw0eS1zuuY1ar9TdPn1GMfrjbQ/fJ1Qj_DbMOhbRGGkpMApOBRA6jcd.xml" value="317cfbea"/>
+        <File path="resources/project/qaw0eS1zuuY1ar9TdPn1GMfrjbQ/fJ1Qj_DbMOhbRGGkpMApOBRA6jcp.xml" value="76387181"/>
+        <File path="resources/project/qaw0eS1zuuY1ar9TdPn1GMfrjbQ/hLMKfvmMZYFbdoE4Xco7ryXas6sd.xml" value="fbf03ea7"/>
+        <File path="resources/project/qaw0eS1zuuY1ar9TdPn1GMfrjbQ/hLMKfvmMZYFbdoE4Xco7ryXas6sp.xml" value="aa6efbd4"/>
+        <File path="resources/project/qaw0eS1zuuY1ar9TdPn1GMfrjbQ/qD-kr16wmwlzR-nIg1IG_vvRrWkd.xml" value="fbf03ea7"/>
+        <File path="resources/project/qaw0eS1zuuY1ar9TdPn1GMfrjbQ/qD-kr16wmwlzR-nIg1IG_vvRrWkp.xml" value="93cbf1"/>
+        <File path="resources/project/qaw0eS1zuuY1ar9TdPn1GMfrjbQ/uWi_5P7_goqTbcPhGSVfsWk1ZRUd.xml" value="df0217e1"/>
+        <File path="resources/project/qaw0eS1zuuY1ar9TdPn1GMfrjbQ/uWi_5P7_goqTbcPhGSVfsWk1ZRUp.xml" value="e4629776"/>
+        <File path="resources/project/qaw0eS1zuuY1ar9TdPn1GMfrjbQ/ylGR4ftUqbl5RzU-n0F1oVBeI_sd.xml" value="317cfbea"/>
+        <File path="resources/project/qaw0eS1zuuY1ar9TdPn1GMfrjbQ/ylGR4ftUqbl5RzU-n0F1oVBeI_sp.xml" value="ba5bb8ce"/>
+        <File path="resources/project/qaw0eS1zuuY1ar9TdPn1GMfrjbQ" value="-1"/>
+        <File path="resources/project/root/6x1BhZX_fLnKpcwqra0qFwv1jIgp.xml" value="2b03b801"/>
+        <File path="resources/project/root/EEtUlUb-dLAdf0KpMVivaUlztwAp.xml" value="44d17b27"/>
+        <File path="resources/project/root/GiiBklLgTxteCEmomM8RCvWT0nQd.xml" value="85c0159e"/>
+        <File path="resources/project/root/GiiBklLgTxteCEmomM8RCvWT0nQp.xml" value="c92de2c0"/>
+        <File path="resources/project/root/KAXfQgCar2Yb8zOxgvf9hdmLP1Ep.xml" value="fe97d152"/>
+        <File path="resources/project/root/LUgSFhI3RPozNzNcutxrczVe6f0p.xml" value="cd6ca828"/>
+        <File path="resources/project/root/NmGqIpAwUJcXFyLjFAGnU9uyN5Yp.xml" value="1b49afbb"/>
+        <File path="resources/project/root/fjRQtWiSIy7hIlj-Kmk87M7s21kp.xml" value="7e742dae"/>
+        <File path="resources/project/root/qaw0eS1zuuY1ar9TdPn1GMfrjbQp.xml" value="4a2f6ccc"/>
+        <File path="resources/project/rootp.xml" value="3af507e"/>
+        <File path="resources/project/root" value="-1"/>
+        <File path="resources/project/uuid-c4a865d7-c806-4c83-be66-5f11cbce493e.xml" value="3af507e"/>
+        <File path="resources/project" value="-1"/>
+        <File path="resources" value="-1"/>
+        <File path="sim_VERDICT.m" value="8d987640"/>
+        <File path="source/VERDICT_fit.m" value="d19fe7ef"/>
+        <File path="source/astrosticks.m" value="afdc9f97"/>
+        <File path="source/ball.m" value="5175d988"/>
+        <File path="source/sphereGPD.m" value="85de7e08"/>
+        <File path="source/stejskal.m" value="e32acbd2"/>
+        <File path="source" value="-1"/>
+        <File path="tests/.DS_Store" value="6d88006a"/>
+        <File path="tests/testastrosticks.m" value="86bb3cc9"/>
+        <File path="tests/testball.m" value="c37d2995"/>
+        <File path="tests/testsphereGPD.m" value="cdd10343"/>
+        <File path="tests/teststejskal.m" value="c2610a64"/>
+        <File path="tests" value="-1"/>
+        <File path="try_VERDICT.asv" value="12c5ef7"/>
+        <File path="try_VERDICT.m" value="f23f31d4"/>
+        <File path="try_VERDICT.prj" value="66e3772a"/>
+        <File path="utilities/runTheseTests.m" value="90283847"/>
+        <File path="utilities" value="-1"/>
+        <File path="verdict_main.asv" value="363d77b1"/>
+        <File path="verdict_main.mlappinstall" value="13ef2894"/>
+        <File path="verdict_main.m" value="e8f212ae"/>
+        <File path="verdict_main.prj" value="968c2493"/>
+        <File path="verdict_mainstandaloneApplication/includedSupportPackages.txt" value="0"/>
+        <File path="verdict_mainstandaloneApplication/mccExcludedFiles.log" value="c183e00e"/>
+        <File path="verdict_mainstandaloneApplication/readme.txt" value="2cb3859a"/>
+        <File path="verdict_mainstandaloneApplication/requiredMCRProducts.txt" value="5d43576c"/>
+        <File path="verdict_mainstandaloneApplication/run_verdict_main.sh" value="be407114"/>
+        <File path="verdict_mainstandaloneApplication/unresolvedSymbols.txt" value="93767466"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Info.plist" value="e9219df9"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/MacOS/applauncher" value="37a0a1c7"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/MacOS/prelaunch" value="1ab25456"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/MacOS/verdict_main" value="de4df36b"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/MacOS" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/Base.lproj/About.nib/keyedobjects-101300.nib" value="6c64d4ad"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/Base.lproj/About.nib/keyedobjects.nib" value="8ae8fece"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/Base.lproj/About.nib" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/Base.lproj/MWOpenAccessoryView.nib/keyedobjects-101300.nib" value="3bfff68f"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/Base.lproj/MWOpenAccessoryView.nib/keyedobjects.nib" value="1bff54f6"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/Base.lproj/MWOpenAccessoryView.nib" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/Base.lproj/MWSaveAccessoryView.nib/keyedobjects-101300.nib" value="f9649ce0"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/Base.lproj/MWSaveAccessoryView.nib/keyedobjects.nib" value="df56e274"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/Base.lproj/MWSaveAccessoryView.nib" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/Base.lproj/MainMenu.nib/keyedobjects-101300.nib" value="38834790"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/Base.lproj/MainMenu.nib/keyedobjects.nib" value="125d1029"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/Base.lproj/MainMenu.nib" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/Base.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/aa.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/ab.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/abr.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/ace.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/ach.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/ady.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/aeb.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/af.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/ak.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/aln.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/am.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/an.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/ar.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/arn.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/arq.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/ary.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/arz.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/as.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/ast.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/av.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/awa.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/ay.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/az.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/ba.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/bal.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/ban.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/bar.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/bbc.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/bci.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/be.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/bej.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/bem.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/ber.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/bew.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/bg.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/bgc.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/bgn.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/bhb.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/bhi.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/bhk.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/bho.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/bi.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/bik.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/bin.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/bjj.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/bjn.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/bjt.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/bm.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/bn.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/bo.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/bqi.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/br.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/brh.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/brx.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/bs.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/bsc.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/buc.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/bug.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/bum.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/byn.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/ca.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/ce.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/ceb.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/cgg.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/ch.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/chk.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/chr.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/ckb.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/co.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/crh.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/crs.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/cs.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/csb.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/cv.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/cy.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/da.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/dcc.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/de.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/dje.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/doi.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/dsb.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/dv.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/dyo.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/dyu.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/dz.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/ee.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/efi.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/el.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/en.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/es.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/et.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/eu.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/fa.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/fan.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/ff.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/ffm.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/fi.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/fil.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/fj.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/fo.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/fon.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/fr.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/fud.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/fuq.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/fur.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/fuv.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/fy.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/ga.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/gaa.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/gan.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/gbm.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/gbz.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/gcr.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/gd.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/gez.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/gil.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/gl.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/glk.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/gn.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/gom.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/gon.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/gor.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/gsw.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/gu.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/guz.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/gv.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/ha.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/hak.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/haw.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/haz.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/he.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/hi.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/hif.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/hil.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/hne.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/hno.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/ho.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/hoc.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/hoj.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/hr.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/hsb.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/hsn.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/ht.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/hu.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/hy.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/ibb.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/id.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/ig.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/ii.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/ik.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/ikt.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/ilo.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/inh.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/is.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/it.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/iu.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/ja.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/jam.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/jml.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/jv.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/ka.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/kab.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/kam.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/kbd.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/kde.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/kea.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/kfy.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/kg.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/kha.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/khn.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/ki.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/kj.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/kk.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/kl.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/kln.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/km.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/kmb.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/kn.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/knf.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/ko.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/koi.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/kok.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/kr.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/krc.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/kri.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/kru.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/ks.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/ku.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/kum.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/kv.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/kw.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/kxm.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/ky.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/la.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/lah.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/laj.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/lb.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/lbe.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/lez.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/lg.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/li.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/ljp.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/lmn.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/ln.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/lo.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/lrc.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/lt.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/lu.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/lua.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/luo.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/luy.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/luz.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/lv.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/mad.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/mag.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/mai.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/mak.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/man.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/mdf.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/mdh.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/membrane.icns" value="9a5e3c9e"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/men.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/mer.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/mey.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/mfa.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/mfe.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/mfv.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/mg.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/mgh.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/mh.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/mi.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/min.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/mk.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/ml.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/mn.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/mni.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/moh.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/mos.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/mr.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/ms.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/mt.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/mtr.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/mwr.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/my.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/myv.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/myx.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/mzn.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/na.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/nan.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/nb.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/nd.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/ndc.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/nds.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/ne.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/new.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/ng.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/ngl.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/niu.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/nl.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/nn.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/no.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/nod.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/noe.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/nr.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/nso.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/ny.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/nym.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/nyn.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/oc.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/om.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/or.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/os.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/pa.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/pag.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/pam.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/pap.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/pau.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/pcm.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/pl.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/pon.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/prs.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/ps.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/pt.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/qu.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/quc.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/quz.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/raj.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/rcf.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/rej.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/rif.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/rkt.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/rm.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/rmt.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/rn.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/ro.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/ru.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/rw.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/sa.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/sah.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/sas.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/sat.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/sav.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/sc.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/sck.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/sco.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/sd.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/sdh.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/se.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/sef.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/seh.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/sg.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/sh.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/shi.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/shn.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/shs.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/si.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/sid.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/sk.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/skr.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/sl.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/sm.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/sma.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/smj.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/smn.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/sms.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/sn.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/snf.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/snk.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/so.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/sou.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/sq.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/sr.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/srn.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/srr.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/ss.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/st.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/su.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/suk.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/sus.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/sv.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/sw.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/swb.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/swc.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/swv.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/syl.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/syr.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/ta.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/tcy.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/te.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/tem.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/teo.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/tet.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/tg.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/th.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/ti.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/tig.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/tiv.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/tk.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/tkl.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/tl.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/tmh.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/tn.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/tnr.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/to.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/tpi.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/tr.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/ts.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/tsg.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/tt.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/tts.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/tum.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/tvl.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/ty.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/tyv.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/tzm.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/udm.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/ug.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/uk.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/umb.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/und.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/unr.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/ur.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/uz.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/vai.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/ve.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main.ctf" value="311f2298"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/.META/includedSupportPackages.txt" value="0"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/.META/manifest.xml" value="7ada734c"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/.META/requiredMCRProducts.txt" value="5d43576c"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/.META/unresolvedSymbols.txt" value="93767466"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/.META/verdict_main_UserManifest.mat" value="b195e8e"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/.META" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/.matlab/matlab.mlsettings" value="a9e4b209"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/.matlab/matlab.prf" value="a368e656"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/.matlab/matlabprefs.mat" value="80d66a33"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/.matlab/parallel.mlsettings" value="7144fe38"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/.matlab" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/Users/davidatkinson/Library/Application Support/MathWorks/MATLAB Add-Ons/Toolboxes/WSI/source/Contents.m" value="a4a27637"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/Users/davidatkinson/Library/Application Support/MathWorks/MATLAB Add-Ons/Toolboxes/WSI/source" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/Users/davidatkinson/Library/Application Support/MathWorks/MATLAB Add-Ons/Toolboxes/WSI" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/Users/davidatkinson/Library/Application Support/MathWorks/MATLAB Add-Ons/Toolboxes" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/Users/davidatkinson/Library/Application Support/MathWorks/MATLAB Add-Ons" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/Users/davidatkinson/Library/Application Support/MathWorks" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/Users/davidatkinson/Library/Application Support" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/Users/davidatkinson/Library" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/Users/davidatkinson/matlab/Projects/DICOM/source/dfparse.m" value="f26cd2c8"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/Users/davidatkinson/matlab/Projects/DICOM/source" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/Users/davidatkinson/matlab/Projects/DICOM" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/Users/davidatkinson/matlab/Projects" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/Users/davidatkinson/matlab/imgtools-external/set_external_path.m" value="817f84a"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/Users/davidatkinson/matlab/imgtools-external" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/Users/davidatkinson/matlab/imgtools-public/external/SpinCalc1p3/SpinCalc.m" value="3152b20d"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/Users/davidatkinson/matlab/imgtools-public/external/SpinCalc1p3" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/Users/davidatkinson/matlab/imgtools-public/external/text2im.m" value="95ba093d"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/Users/davidatkinson/matlab/imgtools-public/external" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/Users/davidatkinson/matlab/imgtools-public/io/cast_private.m" value="6ab8958c"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/Users/davidatkinson/matlab/imgtools-public/io/d2mat.m" value="c1ff88c4"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/Users/davidatkinson/matlab/imgtools-public/io/data_process.m" value="3cc68568"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/Users/davidatkinson/matlab/imgtools-public/io/fillstruct.m" value="e2146937"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/Users/davidatkinson/matlab/imgtools-public/io/writeDicom.m" value="4585e2a5"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/Users/davidatkinson/matlab/imgtools-public/io/xmlparrecread.m" value="20179336"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/Users/davidatkinson/matlab/imgtools-public/io" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/Users/davidatkinson/matlab/imgtools-public/set_imgtools_public_path.m" value="51d127a5"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/Users/davidatkinson/matlab/imgtools-public/tools/dgeom.m" value="ee577ade"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/Users/davidatkinson/matlab/imgtools-public/tools/dgeomextract.m" value="32ab905e"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/Users/davidatkinson/matlab/imgtools-public/tools/geom2sro.m" value="5b94d842"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/Users/davidatkinson/matlab/imgtools-public/tools/point_plane.m" value="494bb4d3"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/Users/davidatkinson/matlab/imgtools-public/tools/set_plane.m" value="ee2baf6a"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/Users/davidatkinson/matlab/imgtools-public/tools" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/Users/davidatkinson/matlab/imgtools-public" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/Users/davidatkinson/matlab/imgtools/GUI/Contents.m" value="1a0a5b30"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/Users/davidatkinson/matlab/imgtools/GUI" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/Users/davidatkinson/matlab/imgtools/b1mapping/Contents.m" value="6067936"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/Users/davidatkinson/matlab/imgtools/b1mapping" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/Users/davidatkinson/matlab/imgtools/diffusion/Contents.m" value="83b8b9d"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/Users/davidatkinson/matlab/imgtools/diffusion" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/Users/davidatkinson/matlab/imgtools/io/Contents.m" value="9460020f"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/Users/davidatkinson/matlab/imgtools/io" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/Users/davidatkinson/matlab/imgtools/set_imgtools_path.m" value="aa07ad8b"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/Users/davidatkinson/matlab/imgtools/t1mapping/Contents.m" value="e523312a"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/Users/davidatkinson/matlab/imgtools/t1mapping" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/Users/davidatkinson/matlab/imgtools/tools/Contents.m" value="1424cb7f"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/Users/davidatkinson/matlab/imgtools/tools" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/Users/davidatkinson/matlab/imgtools" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/Users/davidatkinson/matlab/startup.m" value="ebec683c"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/Users/davidatkinson/matlab" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/Users/davidatkinson" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/Users" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/toolbox/compiler/Contents.m" value="51f3dd0"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/toolbox/compiler/ctfroot.m" value="260ca5d0"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/toolbox/compiler/system_dependent.m" value="526e5de0"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/toolbox/compiler" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/toolbox/local/Contents.m" value="57ddb439"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/toolbox/local/matlabrc.m" value="111bf7f6"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/toolbox/local/printopt.m" value="228c0d99"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/toolbox/local" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/toolbox" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/verdict_main/bv2scheme.m" value="bcd042ff"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/verdict_main/get_VERDICTfiles.m" value="81516c1e"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/verdict_main/source/VERDICT_fit.m" value="7c4fd200"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/verdict_main/source/astrosticks.m" value="d8910254"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/verdict_main/source/ball.m" value="c7d83a99"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/verdict_main/source/sphereGPD.m" value="92cb34a4"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/verdict_main/source/stejskal.m" value="cba13f87"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/verdict_main/source" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/verdict_main/verdict_main.m" value="7bfcc9d9"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/verdict_main_99251a25-4963-40ab-a268-fc4c13e87702/token" value="f4dbdf21"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/verdict_main_99251a25-4963-40ab-a268-fc4c13e87702" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr/verdict_main" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/verdict_main_mcr" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/vi.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/vls.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/vmf.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/vmw.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/wa.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/wal.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/war.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/wbq.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/wbr.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/wls.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/wni.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/wo.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/wtm.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/wuu.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/xh.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/xnr.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/xog.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/yi.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/yo.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/yue.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/za.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/zdj.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/zgh.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/zh-Hans.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/zh-Hant-HK.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/zh.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/zu.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources/zza.lproj" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents/Resources" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app/Contents" value="-1"/>
+        <File path="verdict_mainstandaloneApplication/verdict_main.app" value="-1"/>
+        <File path="verdict_mainstandaloneApplication" value="-1"/>
+    </Files>
+    <Date value="30 November 2022 20:09:35"/>
+</Info>
