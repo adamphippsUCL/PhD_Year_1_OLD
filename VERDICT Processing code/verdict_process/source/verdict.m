@@ -54,6 +54,7 @@ arguments
     opts.vADCbmax = '1600' % max b-value used in VERDICT ADC calculation
     opts.allowedSeriesNumbers = [] % SeriesNumbers in this set can be used
     opts.forcedSchemeName = ''     % Force scheme name for debugginh
+    opts.ncompart = '2'            % Nuber of tissue compartment beyond sphere (1 for EES, 2 for EES and VASC)
 end
 
 % Set Release/Version tag here (will be output in report and .mat file)

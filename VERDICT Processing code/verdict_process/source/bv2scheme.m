@@ -183,6 +183,27 @@ switch scanner
                 warning('MATLAB:bv2scheme:unknownBValue',...
                     ['Unknown b-value for scanner: ', scanner])
         end
+    case 'SIGNA PET/MR'
+        switch bv
+            case 90
+                scheme.delta = 5.980 ;
+                scheme.DELTA = 23.800 ; % GradAmps 39.755	
+            case 500
+                scheme.delta = 12.604 ;
+                scheme.DELTA = 31.296 ; % GradAmps 40.150
+            case 1500
+                scheme.delta = 25.772;
+                scheme.DELTA = 43.408 ; % GradAmps 30.111	
+            case 2000
+                scheme.delta = 25.832 ;
+                scheme.DELTA = 34.432 ; % GradAmps 40.281
+            case 3000
+                scheme.delta = 27.164 ;
+                scheme.DELTA = 43.828 ; % GradAmps 40.427
+            otherwise
+                warning('MATLAB:bv2scheme:unknownBValue',...
+                    ['Unknown b-value for scanner: ', scanner])
+        end
     case 'XNAT' % The scheme on prostate-XNAT up to at least January 2023
         switch bv
             case 90

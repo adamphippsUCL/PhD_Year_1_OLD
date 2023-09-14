@@ -60,12 +60,15 @@ arguments
 
     opt.mask {mustBeNumeric,mustBeReal} = []
     opt.solver {mustBeText} = 'lsqnonnegTikonhov'
+    opt.ncompart = 2
 end
 
 nr = length(t.Rs) ;
+ncompart = opt.ncompart ; % number of compartments beyond radii. 2 for Classic, 1 to exclude vasc
 nscheme = length(scheme) ;
 szY = size(Y) ;
 szmap = szY(1:end-1) ;
+
 
 if ~exist('opt','var') || isempty(opt.mask)
     opt.mask = ones(szmap) ;
@@ -85,7 +88,7 @@ if isequal(solver,'SPAMS')
     end
 end
 
-A = zeros([nscheme nr+2]) ; 
+A = zeros([nscheme nr+ncompart]) ; 
 sIC  = zeros([nscheme nr]) ;
 sEES = zeros([1 nscheme]) ;
 sVASC = zeros([1 nscheme]) ;
@@ -99,7 +102,11 @@ for ischeme = 1:nscheme
     sEES(ischeme)  = ball(scheme(ischeme).bval, t.dEES) ;
     sVASC(ischeme) = astrosticks(scheme(ischeme).bval, t.dVASC) ;
 
-    A(ischeme,:)   = [sIC(ischeme,:) sEES(ischeme) sVASC(ischeme) ] ;
+    if ncompart == 2
+        A(ischeme,:)   = [sIC(ischeme,:) sEES(ischeme) sVASC(ischeme) ] ;
+    else
+        A(ischeme,:)   = [sIC(ischeme,:) sEES(ischeme)] ;
+    end
 end
 
 
@@ -174,7 +181,9 @@ for ip = 1:length(locinmask)  % can be parallelised
     fIC(ind) = sum(x(1:nr)) ;
     R(ind)   = sum(x(1:nr)'.*t.Rs) / fIC(ind) ;
     fEES(ind) = x(nr+1) ;
-    fVASC(ind) = x(nr+2) ;
+    if ncompart ==2
+        fVASC(ind) = x(nr+2) ;
+    end
 
     rmse(ind) = norm(y(:) - A*x) / sqrt(nscheme) ;
 end

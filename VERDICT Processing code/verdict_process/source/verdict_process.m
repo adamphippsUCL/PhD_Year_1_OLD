@@ -98,6 +98,9 @@ end
 if isfield(opts,'allowedSeriesNumbers') && ischar(opts.allowedSeriesNumbers)
     opts.allowedSeriesNumbers = str2double(opts.allowedSeriesNumbers) ;
 end
+if isfield(opts,'ncompart') && ischar(opts.ncompart)
+    opts.ncompart = str2double(opts.ncompart) ;
+end
 
 % Set timestamp tstr for output folder naming 
 tnow = datetime ;
@@ -717,7 +720,7 @@ append(rpt,Chapter('Fitting'))
 mask = ones([size(vb0,[1 2 3])]) ;
 
 [fIC, fEES, fVASC, R, rmse, A, tparams, vfopt] = verdict_fit(scheme,Y,Rs=Rs, ...
-    mask=mask, solver=opts.solver) ;
+    mask=mask, solver=opts.solver, ncompart=opts.ncompart) ;
 
 if opts.outputAInReport
     append(rpt, Paragraph(' '))
