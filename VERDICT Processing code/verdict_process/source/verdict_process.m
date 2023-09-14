@@ -590,6 +590,7 @@ for iSeries = 1: nSeries
         scheme(1+(iSeries-1)*(nbd+naddb0)) = bv2scheme(0, scanner) ;
     end
 
+    
     % for output/debugging
     vprereg(:,:,:,1+(iSeries-1)*(nbd + 1) : iSeries*(nbd + 1)) = cat(4,vb0,vbv) ;
     vpostreg(:,:,:,1+(iSeries-1)*(nbd + 1) : iSeries*(nbd + 1)) = cat(4,vb0_reg,vbv_reg) ;
