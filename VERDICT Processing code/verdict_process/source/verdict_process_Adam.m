@@ -205,7 +205,11 @@ end
 % %     end
 % % end
 
-Rs = linspace(0.01,15.1,18) ; % radii used in fit. 
+if opts.Rs
+    Rs = opts.Rs;
+else
+    Rs = linspace(0.01,15.1,18) ; % radii used in fit.
+end
 % VERDICT AMICO paper used 0.01:15.1 
 % In online AMICO linspace(0.01,20.1,20);
 % https://github.com/daducci/AMICO_matlab/blob/master/models/AMICO_VERDICTPROSTATE.m

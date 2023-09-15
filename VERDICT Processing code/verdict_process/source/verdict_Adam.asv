@@ -56,7 +56,7 @@ arguments
     opts.forcedSchemeName = ''     % Force scheme name for debugginh
     opts.ncompart = '2'            % Number of tissue compartment beyond sphere (1 for EES, 2 for EES and VASC)
     opts.excludebvals = []  % Exclude specific b values
-    opts.Rs = [] % Specified Rs used in fitting
+    opts.Rs = []
 end
 
 % Set Release/Version tag here (will be output in report and .mat file)
