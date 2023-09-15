@@ -12,7 +12,7 @@ pat_num = 'INN_129';
 DICOM_path = ['D:\UCL PhD Imaging Data\INNOVATE\' pat_num '\scans'];
 
 % Define VERDICT model type
-model_type = 'Original';
+model_type = 'Reduced Rs';
 
 % Create output folder
 ISMRM_folder = 'C:\Users\adam\OneDrive - University College London\UCL PhD\PhD Year 1\PhD_Year_1\ISMRM Submission';
@@ -26,13 +26,29 @@ end
 % Define options for model type
 if strcmp(model_type, 'Original')
     ncompart = 2;
+    excludebvals = [];
+    % Run VERDICT processing code
+    [scheme, Y, fIC, fEES, fVASC, R] = verdict_Adam(DICOM_path, output_path);
+
+
 elseif strcmp(model_type, 'No VASC')
     ncompart = 1;
-    allowedSeriesNumbers = ['b90_vx']
+    excludebvals = [90];
+    % Run VERDICT processing code
+    [scheme, Y, fIC, fEES, fVASC, R] = verdict_Adam(DICOM_path, output_path, ncompart = ncompart, excludebvals = excludebvals);
+
+elseif strcmp(model_type, 'Reduced Rs')
+    ncompart = 2;
+    excludebvals = [];
+    Rs = 5:5:15;
+    % Run VERDICT processing code
+    [scheme, Y, fIC, fEES, fVASC, R] = verdict_Adam(DICOM_path, output_path, Rs = Rs);
+
+else
+    disp('Incorrect model specification')
+    exit()
 end
 
-% Run VERDICT processing code
-[scheme, Y, fIC, fEES, fVASC, R] = verdict_Adam(DICOM_path, output_path, ncompart = ncompart);
 
 % Save results
 save([output_path '/scheme.mat'], 'scheme')

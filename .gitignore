@@ -146,3 +146,10 @@ ISMRM Submission/VERDICT outputs/INN_129/Original/fVASC.mat
 ISMRM Submission/VERDICT outputs/INN_129/Original/R.mat
 ISMRM Submission/VERDICT outputs/INN_129/Original/scheme.mat
 ISMRM Submission/VERDICT outputs/INN_129/Original/Y.mat
+ISMRM Submission/VERDICT outputs/INN_129/Reduced Rs/fEES.mat
+ISMRM Submission/VERDICT outputs/INN_129/Reduced Rs/fIC.mat
+ISMRM Submission/VERDICT outputs/INN_129/Reduced Rs/fVASC.mat
+ISMRM Submission/VERDICT outputs/INN_129/Reduced Rs/R.mat
+ISMRM Submission/VERDICT outputs/INN_129/Reduced Rs/scheme.mat
+ISMRM Submission/VERDICT outputs/INN_129/Reduced Rs/Y.mat
+ISMRM Submission/ROIs/INN_129/lesion.npy
