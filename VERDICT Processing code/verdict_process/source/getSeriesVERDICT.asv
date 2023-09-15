@@ -43,7 +43,7 @@ arguments
     opts.useSubfolders logical = true
     opts.nExpectedSeries = 5
     opts.allowedSeriesNumbers = []
-    opts.excludebvals = []
+    opts.excludedbvals = []
 end
 
 vMAT = [] ; ivMAT = 0;
@@ -201,12 +201,9 @@ for iusn = 1:length(usn)
         loc_sn = sn==usn(iusn) ; % locations in dinfo of this series number
         ubv_this = unique(bv(loc_sn)) ; % unique b-values in this series
 
-        % CODE ADDED TO EXCLUDE B VALUE
         if sum( ismember(ubv_this, opts.excludebvals))
-            disp(['VERDICT series' usn(iusn) 'with b values ' num2str(ubv_this) ' removed'])
-            continue
-        end
 
+        end
         disp(['Series ',num2str(usn(iusn)),' contains b-values: ',num2str(ubv_this)])
 
         if length(ubv_this) == 2

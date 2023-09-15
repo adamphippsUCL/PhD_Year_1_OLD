@@ -1,4 +1,4 @@
-function [scheme, fIC] = verdict_process_Adam(dfolder, output_folder, opts)
+function [scheme, Y,fIC, fEES, fVASC, R] = verdict_process_Adam(dfolder, output_folder, opts)
 % VERDICT_PROCESS VERDICT processing 
 %
 % See wrapping function VERDICT for how to call this function
@@ -101,6 +101,9 @@ end
 if isfield(opts,'ncompart') && ischar(opts.ncompart)
     opts.ncompart = str2double(opts.ncompart) ;
 end
+if isfield(opts,'excludebvals') && ischar(opts.ncompart)
+    opts.ncompart = str2double(opts.ncompart) ;
+end
 
 % Set timestamp tstr for output folder naming 
 tnow = datetime ;
@@ -123,27 +126,27 @@ resultsFolder = fullfile(output_folder, opts.resultsFolderName) ;
 % logObj.LogFile = logFFN ; 
 % 
 % logObj.info(['Timestamp: ',tstr_nice,' (',tstr,')'])
-
-
-[status,msg,msgID] = mkdir(output_folder) ;
-if status == 0
-    warning(msgID, msg)
-    return
-end
-
-[status,msg,msgID] = mkdir(resultsFolder) ;
-if status == 0
-    warning(msgID, msg)
-    return
-end
-
-if opts.outputDicom == true
-    [status,msg,msgID] = mkdir(fullfile(resultsFolder,'DICOM')) ;
-    if status == 0
-        warning(msgID, msg)
-        return
-    end
-end
+% % 
+% % 
+% % [status,msg,msgID] = mkdir(output_folder) ;
+% % if status == 0
+% %     warning(msgID, msg)
+% %     return
+% % end
+% % 
+% % [status,msg,msgID] = mkdir(resultsFolder) ;
+% % if status == 0
+% %     warning(msgID, msg)
+% %     return
+% % end
+% % 
+% % if opts.outputDicom == true
+% %     [status,msg,msgID] = mkdir(fullfile(resultsFolder,'DICOM')) ;
+% %     if status == 0
+% %         warning(msgID, msg)
+% %         return
+% %     end
+% % end
 
 % % 
 % % % Set up Reporting
@@ -318,9 +321,9 @@ if opts.register
     [optimizer,metric] = imregconfig('monomodal') ; % monomodal as b=0 to b=0
     fw = fw_pix ;    % figure width in pixels
     fh = fw/nSeries*3 ;
-    hfreg_check = figure(Name='Pre and Post Registration', Position=[250 500 fw round(fh)],Visible=figVisible);
-    treg = tiledlayout(3,nSeries,'TileSpacing','none','Padding','tight') ;
-    axrs = [] ;
+% %     hfreg_check = figure(Name='Pre and Post Registration', Position=[250 500 fw round(fh)],Visible=figVisible);
+% %     treg = tiledlayout(3,nSeries,'TileSpacing','none','Padding','tight') ;
+% %     axrs = [] ;
 end
 
 % Pre-allocate variables used for checking data
@@ -543,20 +546,20 @@ for iSeries = 1: nSeries
         % Figure to QA registration. Top row preserves scaling
         % Middle row is moving images
         % Bottom row is registered.
-        axr = nexttile(treg,tilenum(treg,1,iSeries)) ;
-        imshow(vmoving,[0 vfixedUpper],'Parent',axr) ;
-        axrs = [axrs axr];
-
-        axr = nexttile(treg,tilenum(treg,2,iSeries)) ;
-        imshow(vmoving,[ ],'Parent',axr), hold on
-        plot(axr,[1 nxlim],[ylinePos ylinePos],'Color','y')
-        plot(axr,[xlinePos xlinePos],[1 nylim],'Color','y')
-        axrs = [axrs axr];
-        axr = nexttile(treg,tilenum(treg,3,iSeries)) ;
-        imshow(vb0_reg(maskc{:},reg_slice),[ ],'Parent',axr), hold on
-        plot(axr,[1 nxlim],[ylinePos ylinePos],'Color','y')
-        plot(axr,[xlinePos xlinePos],[1 nylim],'Color','y')
-        axrs = [axrs axr];
+% %         axr = nexttile(treg,tilenum(treg,1,iSeries)) ;
+% %         imshow(vmoving,[0 vfixedUpper],'Parent',axr) ;
+% %         axrs = [axrs axr];
+% % 
+% %         axr = nexttile(treg,tilenum(treg,2,iSeries)) ;
+% %         imshow(vmoving,[ ],'Parent',axr), hold on
+% %         plot(axr,[1 nxlim],[ylinePos ylinePos],'Color','y')
+% %         plot(axr,[xlinePos xlinePos],[1 nylim],'Color','y')
+% %         axrs = [axrs axr];
+% %         axr = nexttile(treg,tilenum(treg,3,iSeries)) ;
+% %         imshow(vb0_reg(maskc{:},reg_slice),[ ],'Parent',axr), hold on
+% %         plot(axr,[1 nxlim],[ylinePos ylinePos],'Color','y')
+% %         plot(axr,[xlinePos xlinePos],[1 nylim],'Color','y')
+% %         axrs = [axrs axr];
     else
         vb0_reg = vb0 ;
         vbv_reg = vbv ;
@@ -597,6 +600,7 @@ for iSeries = 1: nSeries
         scheme(1+(iSeries-1)*(nbd+naddb0)) = bv2scheme(0, scanner) ;
     end
 
+
     % for output/debugging
     vprereg(:,:,:,1+(iSeries-1)*(nbd + 1) : iSeries*(nbd + 1)) = cat(4,vb0,vbv) ;
     vpostreg(:,:,:,1+(iSeries-1)*(nbd + 1) : iSeries*(nbd + 1)) = cat(4,vb0_reg,vbv_reg) ;
@@ -604,9 +608,9 @@ for iSeries = 1: nSeries
 
 end % iSeries
 
-if opts.register
-    linkaxes(axrs)
-end
+% % if opts.register
+% %     linkaxes(axrs)
+% % end
 % % 
 % % hfmedian = figure(Name='medians', Visible=figVisible) ;
 % % plot(plotbv,medianvb0,'LineWidth',2,'DisplayName','Median B0'), hold on

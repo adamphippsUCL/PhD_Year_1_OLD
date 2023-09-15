@@ -102,6 +102,7 @@ if isfield(opts,'ncompart') && ischar(opts.ncompart)
     opts.ncompart = str2double(opts.ncompart) ;
 end
 
+
 % Set timestamp tstr for output folder naming 
 tnow = datetime ;
 tstr_nice = char(tnow) ;
@@ -123,27 +124,27 @@ resultsFolder = fullfile(output_folder, opts.resultsFolderName) ;
 % logObj.LogFile = logFFN ; 
 % 
 % logObj.info(['Timestamp: ',tstr_nice,' (',tstr,')'])
-
-
-[status,msg,msgID] = mkdir(output_folder) ;
-if status == 0
-    warning(msgID, msg)
-    return
-end
-
-[status,msg,msgID] = mkdir(resultsFolder) ;
-if status == 0
-    warning(msgID, msg)
-    return
-end
-
-if opts.outputDicom == true
-    [status,msg,msgID] = mkdir(fullfile(resultsFolder,'DICOM')) ;
-    if status == 0
-        warning(msgID, msg)
-        return
-    end
-end
+% % 
+% % 
+% % [status,msg,msgID] = mkdir(output_folder) ;
+% % if status == 0
+% %     warning(msgID, msg)
+% %     return
+% % end
+% % 
+% % [status,msg,msgID] = mkdir(resultsFolder) ;
+% % if status == 0
+% %     warning(msgID, msg)
+% %     return
+% % end
+% % 
+% % if opts.outputDicom == true
+% %     [status,msg,msgID] = mkdir(fullfile(resultsFolder,'DICOM')) ;
+% %     if status == 0
+% %         warning(msgID, msg)
+% %         return
+% %     end
+% % end
 
 % % 
 % % % Set up Reporting
@@ -259,7 +260,8 @@ end
 
 dicomdict("factory")
 
-[dinfo, vSeriesNumbers, vBV, dinfoT2ax, T2axSeriesNumbers, vMAT, dscheme] = getSeriesVERDICT(dfolder, "allowedSeriesNumbers",opts.allowedSeriesNumbers) ;
+[dinfo, vSeriesNumbers, vBV, dinfoT2ax, T2axSeriesNumbers, vMAT, dscheme] = getSeriesVERDICT(dfolder, allowedSeriesNumbers = opts.allowedSeriesNumbers, ...
+    excludebvals = opts.excludebvals) ;
 
 
 if isempty(dinfo)

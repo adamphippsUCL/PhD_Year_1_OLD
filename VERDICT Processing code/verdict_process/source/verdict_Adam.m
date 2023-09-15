@@ -1,4 +1,4 @@
-function [scheme, Y, fIC] = verdict_Adam(dfolder, output_folder, opts)
+function [scheme, Y, fIC, fEES, fVASC, R] = verdict_Adam(dfolder, output_folder, opts)
 % VERDICT A wrapper function for VERDICT processing. Intended either
 % for MATLAB directly, or deployed as a Docker container.
 %
@@ -54,7 +54,8 @@ arguments
     opts.vADCbmax = '1600' % max b-value used in VERDICT ADC calculation
     opts.allowedSeriesNumbers = [] % SeriesNumbers in this set can be used
     opts.forcedSchemeName = ''     % Force scheme name for debugginh
-    opts.ncompart = '2'            % Nuber of tissue compartment beyond sphere (1 for EES, 2 for EES and VASC)
+    opts.ncompart = '2'            % Number of tissue compartment beyond sphere (1 for EES, 2 for EES and VASC)
+    opts.excludebvals = []  % Exclude specific b values
 end
 
 % Set Release/Version tag here (will be output in report and .mat file)
