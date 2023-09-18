@@ -7,6 +7,7 @@ import sys
 import glob
 import os
 
+
 # Import DICOM from imgtools
 sys.path.insert(0, r'C:\Users\adam\OneDrive - University College London\UCL PhD\MRes Year\Project\MRes_Project\Prostate MRI Project')
 from imgtools import DICOM # type: ignore

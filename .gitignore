@@ -153,3 +153,8 @@ ISMRM Submission/VERDICT outputs/INN_129/Reduced Rs/R.mat
 ISMRM Submission/VERDICT outputs/INN_129/Reduced Rs/scheme.mat
 ISMRM Submission/VERDICT outputs/INN_129/Reduced Rs/Y.mat
 ISMRM Submission/ROIs/INN_129/lesion.npy
+ISMRM Submission/fIC results/INN_129/L1/Original.npy
+ISMRM Submission/fIC results/INN_129/NPZ/Original.npy
+.gitignore
+ISMRM Submission/ROIs/INN_129/L1.npy
+ISMRM Submission/ROIs/INN_129/NPZ.npy
