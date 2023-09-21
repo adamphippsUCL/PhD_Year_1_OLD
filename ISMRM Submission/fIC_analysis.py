@@ -14,9 +14,9 @@ sys.path.insert(0, r'C:\Users\adam\OneDrive - University College London\UCL PhD\
 from imgtools import DICOM # type: ignore
 
 
-
 # Function for saving ROI masks
-def saveROImask(PatNum, 
+def saveROImask(
+                PatNum, 
                 ROIName, 
                 INNOVATE_path = r"D:\UCL PhD Imaging Data\INNOVATE", 
                 INNOVATE_ROIs_path = r"D:\UCL PhD Imaging Data\INNOVATE ROIs",
@@ -64,8 +64,7 @@ def saveROImask(PatNum,
     # Save lesion mask
     np.save(f'{output_path}/{PatNum}/{ROIName}.npy', LesionMask)
                     
-                    
-                    
+                                  
 # Function for extracting fIC values from ROI
 def extractROIfICs(
     PatNum,
@@ -102,9 +101,7 @@ def extractROIfICs(
         
     np.save(f'{output_path}/{PatNum}/{ROIName}/{ModelType}.npy', ROI_fIC)
     
-    
-    
-
+       
 def readBiopsyResults(
     biopsy_data_xlsx = r'C:\Users\adam\OneDrive - University College London\UCL PhD\PhD Year 1\INNOVATE\INNOVATE patient groups 2.0.xlsx'
 ):
@@ -136,9 +133,8 @@ def readBiopsyResults(
     BiopsyResultsDF = pd.DataFrame({'Patient ID': Patients, 'Biopsy Result': Results})
     
     return BiopsyResultsDF
-
-            
-        
+         
+       
 # Function to calculate avg fIC over ROIs
 def avgROIfICs(
     ROIName,

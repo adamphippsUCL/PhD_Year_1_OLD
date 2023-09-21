@@ -42,7 +42,7 @@ elseif strcmp(model_type, 'No VASC')
 
 % Reduced Radii in fitting    
 elseif strcmp(model_type, 'Reduced Rs')
-    Rs = 3:2:17;
+    Rs = 5:2:15;
     % Run VERDICT processing code
     [scheme, Y, fIC, fEES, fVASC, R] = verdict_Adam(DICOM_path, output_path, Rs = Rs);
 

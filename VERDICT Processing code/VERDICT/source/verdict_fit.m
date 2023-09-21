@@ -57,9 +57,12 @@ arguments
     t.dIC   (1,1) {mustBeNumeric,mustBeReal} = 2
     t.dVASC (1,1) {mustBeNumeric,mustBeReal} = 8
     t.Rs    (1,:) {mustBeNumeric,mustBeReal} = linspace(0.01,15.1,18) 
-
+%     t.Rs    (1,:) {mustBeNumeric,mustBeReal} = [8,10,12]
+    
     opt.mask {mustBeNumeric,mustBeReal} = []
-    opt.solver {mustBeText} = 'lsqnonnegTikonhov'
+
+%     opt.solver {mustBeText} = 'lsqnonnegTikonhov'
+    opt.solver {mustBeText} = 'lsqnonneg'
     opt.ncompart = 2
 end
 

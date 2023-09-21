@@ -158,3 +158,30 @@ ISMRM Submission/fIC results/INN_129/NPZ/Original.npy
 .gitignore
 ISMRM Submission/ROIs/INN_129/L1.npy
 ISMRM Submission/ROIs/INN_129/NPZ.npy
+ISMRM Submission/fIC_analysis.py
+20230825 New VERDICT scheme simulation/Parameter choices/Figures/SphereSignal_BigDelta.png
+20230825 New VERDICT scheme simulation/Parameter choices/Figures/grid search/Sensitivity at R = 8, b = 775.png
+20230825 New VERDICT scheme simulation/Parameter choices/Figures/grid search/Sensitivity at R = 8, delta = 11.png
+20230825 New VERDICT scheme simulation/Parameter choices/Figures/grid search/Sensitivity at R = 8, Delta = 16.png
+20230825 New VERDICT scheme simulation/Parameter choices/Figures/grid search/Sensitivity at R = 10, b = 500.png
+20230825 New VERDICT scheme simulation/Parameter choices/Figures/grid search/Sensitivity at R = 10, b = 775.png
+20230825 New VERDICT scheme simulation/Parameter choices/Figures/grid search/Sensitivity at R = 10, delta = 17.png
+20230825 New VERDICT scheme simulation/Parameter choices/Figures/grid search/Sensitivity at R = 10, Delta = 26.png
+20230825 New VERDICT scheme simulation/Parameter choices/Figures/grid search/Sensitivity at R = 10, delta = 49.png
+20230825 New VERDICT scheme simulation/Parameter choices/Figures/grid search/Sensitivity at R = 10, Delta = 60.png
+20230825 New VERDICT scheme simulation/Parameter choices/Figures/grid search/Sensitivity at R = 12, b = 775.png
+20230825 New VERDICT scheme simulation/Parameter choices/Figures/grid search/Sensitivity at R = 12, delta = 25.png
+20230825 New VERDICT scheme simulation/Parameter choices/Figures/grid search/Sensitivity at R = 12, Delta = 38.png
+20230825 New VERDICT scheme simulation/Parameter choices/Figures/grid search/Signal at R = 8, b = 775.png
+20230825 New VERDICT scheme simulation/Parameter choices/Figures/grid search/Signal at R = 8, delta = 11.png
+20230825 New VERDICT scheme simulation/Parameter choices/Figures/grid search/Signal at R = 8, Delta = 16.png
+20230825 New VERDICT scheme simulation/Parameter choices/Figures/grid search/Signal at R = 10, b = 500.png
+20230825 New VERDICT scheme simulation/Parameter choices/Figures/grid search/Signal at R = 10, b = 775.png
+20230825 New VERDICT scheme simulation/Parameter choices/Figures/grid search/Signal at R = 10, delta = 17.png
+20230825 New VERDICT scheme simulation/Parameter choices/Figures/grid search/Signal at R = 10, Delta = 26.png
+20230825 New VERDICT scheme simulation/Parameter choices/Figures/grid search/Signal at R = 10, delta = 49.png
+20230825 New VERDICT scheme simulation/Parameter choices/Figures/grid search/Signal at R = 10, Delta = 60.png
+20230825 New VERDICT scheme simulation/Parameter choices/Figures/grid search/Signal at R = 12, b = 775.png
+20230825 New VERDICT scheme simulation/Parameter choices/Figures/grid search/Signal at R = 12, delta = 25.png
+20230825 New VERDICT scheme simulation/Parameter choices/Figures/grid search/Signal at R = 12, Delta = 38.png
+20230825 New VERDICT scheme simulation/Optimising VERDICT scans.pptx

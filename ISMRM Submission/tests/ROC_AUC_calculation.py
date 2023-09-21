@@ -14,8 +14,9 @@ Weights = np.random.uniform(50,150, 1000)
 # Healthy
 Healthy_score = 1.0*(Weights < 100)
 
+
 # Add noise to Weights
-Measured_Weights = Weights + np.random.uniform(-25,15,1000)
+Measured_Weights = Weights + np.random.uniform(-10,10,1000)
 
 
 
