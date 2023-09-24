@@ -8,6 +8,8 @@ import glob
 import os
 from scipy.io import loadmat
 import pandas as pd
+import pickle
+from sklearn.metrics import roc_curve, roc_auc_score
 
 # Import DICOM from imgtools
 sys.path.insert(0, r'C:\Users\adam\OneDrive - University College London\UCL PhD\MRes Year\Project\MRes_Project\Prostate MRI Project')
@@ -19,7 +21,7 @@ def saveROImask(
                 PatNum, 
                 ROIName, 
                 INNOVATE_path = r"D:\UCL PhD Imaging Data\INNOVATE", 
-                INNOVATE_ROIs_path = r"D:\UCL PhD Imaging Data\INNOVATE ROIs",
+                INNOVATE_ROIs_path = r"D:\UCL PhD Imaging Data\test INNOVATE ROIs",
                 output_path = r"C:\Users\adam\OneDrive - University College London\UCL PhD\PhD Year 1\PhD_Year_1\ISMRM Submission\ROIs"):
     
     '''
@@ -30,7 +32,9 @@ def saveROImask(
     '''
     
     # Define path to DICOMs for patient
-    Img_DICOM_path = f'{INNOVATE_path}/{PatNum}\scans'
+    '''Using INN_129 as example image for all while testing!!! Make sure to change this'''
+    TESTPATNUM = 'INN_129'
+    Img_DICOM_path = f'{INNOVATE_path}/{TESTPATNUM}\scans'
     
     # Find filename for b3000 image
     b3000_DICOM_fname = glob.glob(f'{Img_DICOM_path}/*b3000_80/DICOM/*')[0]
@@ -62,6 +66,10 @@ def saveROImask(
     LesionMask = LesionMask[b3000_bVals == 0]
 
     # Save lesion mask
+    try:
+        os.makedirs(f'{output_path}/{PatNum}')
+    except:
+        None
     np.save(f'{output_path}/{PatNum}/{ROIName}.npy', LesionMask)
                     
                                   
@@ -101,6 +109,7 @@ def extractROIfICs(
         
     np.save(f'{output_path}/{PatNum}/{ROIName}/{ModelType}.npy', ROI_fIC)
     
+
        
 def readBiopsyResults(
     biopsy_data_xlsx = r'C:\Users\adam\OneDrive - University College London\UCL PhD\PhD Year 1\INNOVATE\INNOVATE patient groups 2.0.xlsx'
@@ -182,4 +191,75 @@ def avgROIfICs(
         # Create dataframe
         fIC_DF = pd.DataFrame({'Patient ID': PatNums, 'Avg fIC': avgfICs})
         
-        print(fIC_DF)
+        # Create directory
+        # Save dataframe as pickle
+        with open('fIC results/average_fIC_df.pickle', 'wb') as handle:
+            pickle.dump(fIC_DF, handle, protocol=pickle.HIGHEST_PROTOCOL)
+            
+
+# avgROIfICs(ROIName = 'L1', ModelType = 'No VASC')
+        
+    
+def fIC_ROC(ModelType ):
+    
+    '''
+    Python function to generate ROC curve for lesion classification from 
+    a specified model type
+    
+    General methods:
+    
+    1. Read in average fIC and biopsy results dataframes
+    2. Create corresponding arrays of average fIC and biopsy outcomes (significant or insignificant)
+    3. Use sklearn to generate ROC curve
+    
+    '''
+    
+    # Read in average fIC dataframe
+    with open('fIC results/average_fIC_df.pickle', 'rb') as handle:
+        fIC_DF = pickle.load(handle)
+        
+
+    # Read in biopsy results dataframe
+    BiopsyResults_DF = readBiopsyResults()
+
+    # Construct list of common patients (in Biopsy DF and fIC DF)
+    fIC_PatList = fIC_DF['Patient ID'].values
+    Biopsy_PatList = BiopsyResults_DF['Patient ID'].values
+    
+    PatList = fIC_PatList[ np.array([Pat in Biopsy_PatList for Pat in fIC_PatList]) ]
+    
+    # Construct arrays for biopsy results and fIC
+    BiopsyResults = []
+    fICs = []
+    
+    for PatNum in PatList:
+        # Extract fIC
+        fIC_Bools = (fIC_DF['Patient ID'].values == PatNum)
+        fICs.append(fIC_DF['Avg fIC'].values[fIC_Bools][0])
+        # Extract biopsy result
+        Biopsy_Bools = (BiopsyResults_DF['Patient ID'].values == PatNum)
+        BiopsyResults.append(BiopsyResults_DF['Biopsy Result'].values[Biopsy_Bools][0])
+        
+    # Make arrays
+    fICs = np.asarray(fICs)    
+    BiopsyResults = np.asarray(BiopsyResults)
+    
+    # Create ROC curve
+    fpr, tpr, thresholds = roc_curve(y_true = BiopsyResults, y_score = fICs)
+    
+    # Calculate roc_auc_score
+    roc_auc = roc_auc_score(y_true = BiopsyResults, y_score = fICs)
+    
+    return fpr, tpr, thresholds, roc_auc
+
+
+
+    
+   
+   
+# for PatNum in ['BAR_003', 'BAR_004', 'BAR_005', 'BAR_006', 'BAR_009', 'BAR_033', 'INN_019']:
+#     saveROImask(PatNum, 'L1')
+#     extractROIfICs(PatNum, ROIName = 'L1', ModelType = 'Original')
+        
+avgROIfICs('L1', 'Original')
+print( fIC_ROC('Original') )

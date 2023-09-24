@@ -58,8 +58,8 @@ elseif strcmp(model_type, 'No VASC Reduced Rs')
 
     % Run VERDICT processing code
     [scheme, Y, fIC, fEES, fVASC, R] = verdict_Adam( ...
-        convertStringsToChars(DICOM_path), ...
-        convertStringsToChars(output_path), ...
+        DICOM_path, ...
+        output_path, ...
         ncompart = ncompart, ...
         Rs = Rs);
 
@@ -70,11 +70,11 @@ end
 
 
 % Save results
-save([convertStringsToChars(output_path) '/scheme.mat'], 'scheme')
-save([convertStringsToChars(output_path) '/Y.mat'], 'Y')   
-save([convertStringsToChars(output_path) '/fIC.mat'], 'fIC')
-save([convertStringsToChars(output_path) '/fEES.mat'], 'fEES')
-save([convertStringsToChars(output_path) '/fVASC.mat'], 'fVASC')
-save([convertStringsToChars(output_path) '/R.mat'], 'R')
+save([output_path '/scheme.mat'], 'scheme')
+save([output_path '/Y.mat'], 'Y')   
+save([output_path '/fIC.mat'], 'fIC')
+save([output_path '/fEES.mat'], 'fEES')
+save([output_path '/fVASC.mat'], 'fVASC')
+save([output_path '/R.mat'], 'R')
 
 end

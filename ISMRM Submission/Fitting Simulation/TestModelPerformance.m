@@ -24,17 +24,16 @@ Vs = [...
 
 % Volume fractions
 fIC = 0.4;
-fVASC = 0.3;
+fVASC = 0.1;
 fEES = 1-fIC-fVASC;
 
-% Radii
+% Spheres
 tissueRmin = 6;
 tissueRmax = 14;
-tissuenR = 3;
+tissuenR = 100; % Number of radii
 
 % Noise level
 NoiseSigma = 0.02;
-
 
 
 %% Define iterations 
@@ -46,15 +45,14 @@ Niter = 1;
 %% Define fitting parameters
 
 % Radii range
-fitRmin = 6;
-fitRmax = 14;
-
+fitRmin = 8;
+fitRmax = 12;
 
 % N compartments
 ncompart = 1;
 
 % Scheme
-Vs = Vs( (3-ncompart):end , : );
+Vs = Vs( (5-2*ncompart):end , : );
 
 %% Iterate over number of model parameters
 
@@ -65,17 +63,27 @@ Nparams = 4:1:19;
 results = zeros(length(Nparams), Niter, 3);
 
 
-for Nparam = Nparams
+for iterindx = 1:Niter
 
-    for indx = 1:Niter
+    % Simulate signal
+    [signals, Vscheme] = SimulateSignal(Vs, fIC, fVASC, tissueRmin, tissueRmax, tissuenR );
+    signals(1:2:end) = 1;
 
-        % Simulate signal
-        [signals, Vscheme] = SimulateSignal(Vs, fIC, fVASC, tissueRmin, tissueRmax, tissuenR );
+    Npindx = 0;
+    for Nparam = Nparams
+        Npindx = Npindx + 1;
 
         % Test fitting
-        [rmse, bias, variance] = TestFitting(signals, Vscheme, NoiseSigma, ncompart, fitRmin, fitRmax, (Nparam-ncompart), 200);
+        [rmse, bias, variance] = TestFitting(signals, Vscheme, fIC, fVASC, NoiseSigma, ncompart, fitRmin, fitRmax, (Nparam-ncompart), 200);
 
-    
+        % Append to results
+        results(Npindx, iterindx, :) = [rmse, bias, variance];
+
     end
+end
 
+figure;
+for iterindx = 1:Niter
+    plot(Nparams, results(:,iterindx,1), '-*')
+    hold on
 end

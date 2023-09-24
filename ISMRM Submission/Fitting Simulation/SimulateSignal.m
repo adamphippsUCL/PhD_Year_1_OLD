@@ -19,16 +19,14 @@ fEES = 1-fIC-fVASC;
 Rs = Rmin + (Rmax - Rmin)*rand(1,nR);
 
 % Random volume fractions
-fRs = zeros(1,length(Rs));
-for indx =1:length(Rs)
-    fRs(indx) = (1-sum(fRs))*rand(1,1);
-end
-fRs = fIC*fRs;
+% fRs = zeros(1,length(Rs));
+% for indx =1:length(Rs)
+%     fRs(indx) = (1-sum(fRs))*rand(1,1);
+% end
 
-% fR1 = rand(1,1);
-% fR2 = (1-fR1)*rand(1,1);
-% fR3 = 1-fR1-fR2;
-% fRs = fIC*[fR1,fR2,fR3];
+fRs = rand(1,length(Rs));
+fRs = fIC*fRs/sum(fRs);
+
 
 tissue_params = [fIC, fEES, fVASC];
 

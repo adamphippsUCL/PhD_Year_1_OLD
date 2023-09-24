@@ -185,3 +185,86 @@ ISMRM Submission/fIC_analysis.py
 20230825 New VERDICT scheme simulation/Parameter choices/Figures/grid search/Signal at R = 12, delta = 25.png
 20230825 New VERDICT scheme simulation/Parameter choices/Figures/grid search/Signal at R = 12, Delta = 38.png
 20230825 New VERDICT scheme simulation/Optimising VERDICT scans.pptx
+ISMRM Submission/ROIs/BAR_003/L1.npy
+ISMRM Submission/ROIs/BAR_004/L1.npy
+ISMRM Submission/ROIs/BAR_005/L1.npy
+ISMRM Submission/ROIs/BAR_006/L1.npy
+ISMRM Submission/ROIs/BAR_009/L1.npy
+ISMRM Submission/ROIs/BAR_033/L1.npy
+ISMRM Submission/ROIs/INN_019/L1.npy
+ISMRM Submission/ROIs/INN_156/L1.npy
+ISMRM Submission/ROIs/INN_209/L1.npy
+ISMRM Submission/ROIs/INN_290/L1.npy
+ISMRM Submission/fIC results/average_fIC_df.pickle
+ISMRM Submission/fIC results/BAR_003/L1/Original.npy
+ISMRM Submission/fIC results/BAR_004/L1/Original.npy
+ISMRM Submission/fIC results/BAR_005/L1/Original.npy
+ISMRM Submission/fIC results/BAR_006/L1/Original.npy
+ISMRM Submission/fIC results/BAR_009/L1/Original.npy
+ISMRM Submission/fIC results/BAR_033/L1/Original.npy
+ISMRM Submission/fIC results/INN_019/L1/Original.npy
+ISMRM Submission/fIC results/INN_129/L1/No VASC.npy
+ISMRM Submission/fIC results/INN_156/L1/Original.npy
+ISMRM Submission/fIC results/INN_209/L1/Original.npy
+ISMRM Submission/fIC results/INN_290/L1/Original.npy
+ISMRM Submission/VERDICT outputs/BAR_003/Original/fEES.mat
+ISMRM Submission/VERDICT outputs/BAR_003/Original/fVASC.mat
+ISMRM Submission/VERDICT outputs/BAR_003/Original/R.mat
+ISMRM Submission/VERDICT outputs/BAR_003/Original/scheme.mat
+ISMRM Submission/VERDICT outputs/BAR_003/Original/Y.mat
+ISMRM Submission/VERDICT outputs/BAR_004/Original/fEES.mat
+ISMRM Submission/VERDICT outputs/BAR_004/Original/fVASC.mat
+ISMRM Submission/VERDICT outputs/BAR_004/Original/R.mat
+ISMRM Submission/VERDICT outputs/BAR_004/Original/scheme.mat
+ISMRM Submission/VERDICT outputs/BAR_004/Original/Y.mat
+ISMRM Submission/VERDICT outputs/BAR_005/Original/fEES.mat
+ISMRM Submission/VERDICT outputs/BAR_005/Original/fIC.mat
+ISMRM Submission/VERDICT outputs/BAR_005/Original/fVASC.mat
+ISMRM Submission/VERDICT outputs/BAR_005/Original/R.mat
+ISMRM Submission/VERDICT outputs/BAR_005/Original/scheme.mat
+ISMRM Submission/VERDICT outputs/BAR_005/Original/Y.mat
+ISMRM Submission/VERDICT outputs/BAR_006/Original/fEES.mat
+ISMRM Submission/VERDICT outputs/BAR_006/Original/fIC.mat
+ISMRM Submission/VERDICT outputs/BAR_006/Original/fVASC.mat
+ISMRM Submission/VERDICT outputs/BAR_006/Original/R.mat
+ISMRM Submission/VERDICT outputs/BAR_006/Original/scheme.mat
+ISMRM Submission/VERDICT outputs/BAR_006/Original/Y.mat
+ISMRM Submission/VERDICT outputs/BAR_009/Original/fEES.mat
+ISMRM Submission/VERDICT outputs/BAR_009/Original/fIC.mat
+ISMRM Submission/VERDICT outputs/BAR_009/Original/fVASC.mat
+ISMRM Submission/VERDICT outputs/BAR_009/Original/R.mat
+ISMRM Submission/VERDICT outputs/BAR_009/Original/scheme.mat
+ISMRM Submission/VERDICT outputs/BAR_009/Original/Y.mat
+ISMRM Submission/VERDICT outputs/BAR_033/Original/fEES.mat
+ISMRM Submission/VERDICT outputs/BAR_033/Original/fIC.mat
+ISMRM Submission/VERDICT outputs/BAR_033/Original/fVASC.mat
+ISMRM Submission/VERDICT outputs/BAR_033/Original/R.mat
+ISMRM Submission/VERDICT outputs/BAR_033/Original/scheme.mat
+ISMRM Submission/VERDICT outputs/BAR_033/Original/Y.mat
+ISMRM Submission/VERDICT outputs/INN_019/Original/fEES.mat
+ISMRM Submission/VERDICT outputs/INN_019/Original/fIC.mat
+ISMRM Submission/VERDICT outputs/INN_019/Original/fVASC.mat
+ISMRM Submission/VERDICT outputs/INN_019/Original/R.mat
+ISMRM Submission/VERDICT outputs/INN_019/Original/scheme.mat
+ISMRM Submission/VERDICT outputs/INN_019/Original/Y.mat
+ISMRM Submission/VERDICT outputs/INN_156/Original/fEES.mat
+ISMRM Submission/VERDICT outputs/INN_156/Original/fIC.mat
+ISMRM Submission/VERDICT outputs/INN_156/Original/fVASC.mat
+ISMRM Submission/VERDICT outputs/INN_156/Original/R.mat
+ISMRM Submission/VERDICT outputs/INN_156/Original/scheme.mat
+ISMRM Submission/VERDICT outputs/INN_156/Original/Y.mat
+ISMRM Submission/VERDICT outputs/INN_209/Original/fEES.mat
+ISMRM Submission/VERDICT outputs/INN_209/Original/fIC.mat
+ISMRM Submission/VERDICT outputs/INN_209/Original/fVASC.mat
+ISMRM Submission/VERDICT outputs/INN_209/Original/R.mat
+ISMRM Submission/VERDICT outputs/INN_209/Original/scheme.mat
+ISMRM Submission/VERDICT outputs/INN_209/Original/Y.mat
+ISMRM Submission/VERDICT outputs/INN_290/Original/fEES.mat
+ISMRM Submission/VERDICT outputs/INN_290/Original/fIC.mat
+ISMRM Submission/VERDICT outputs/INN_290/Original/fVASC.mat
+ISMRM Submission/VERDICT outputs/INN_290/Original/R.mat
+ISMRM Submission/VERDICT outputs/INN_290/Original/scheme.mat
+ISMRM Submission/VERDICT outputs/INN_290/Original/Y.mat
+ISMRM Submission/Fitting Simulation/Figures/bias_results.png
+ISMRM Submission/Fitting Simulation/Figures/rmse_results.png
+ISMRM Submission/Fitting Simulation/Figures/variance_results.png

@@ -61,8 +61,8 @@ arguments
     
     opt.mask {mustBeNumeric,mustBeReal} = []
 
-%     opt.solver {mustBeText} = 'lsqnonnegTikonhov'
-    opt.solver {mustBeText} = 'lsqnonneg'
+    opt.solver {mustBeText} = 'lsqnonnegTikonhov'
+%     opt.solver {mustBeText} = 'lsqnonneg'
     opt.ncompart = 2
 end
 

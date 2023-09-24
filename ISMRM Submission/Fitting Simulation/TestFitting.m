@@ -1,9 +1,11 @@
 % MATLAB function to test fitting
-function [rmse, bias, variance] = TestFitting(signals, Vscheme, NoiseSigma, ncompart, fitRmin, fitRmax, fitnR, Nrep)
+function [rmse, bias, variance] = TestFitting(signals, Vscheme, fIC, fVASC, NoiseSigma, ncompart, fitRmin, fitRmax, fitnR, Nrep)
 
 arguments
     signals % simulated signals
     Vscheme % VERDICT scheme
+    fIC % IC volume fraction
+    fVASC % VASC volume fraction
     NoiseSigma % Noise level (as fraction of b=0 signal intensity)
     ncompart % Number of compartments beyond IC (=1 for No VASC)
     fitRmin % Min radius in fitting
@@ -15,7 +17,7 @@ end
 % Radii
 fitRs = linspace(fitRmin,fitRmax,fitnR);
 
-
+disp(length(signals))
 %% Apply fitting multiple times
 
 % Blank array to be filled with fitting results
