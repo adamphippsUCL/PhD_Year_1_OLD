@@ -52,8 +52,24 @@ elseif strcmp(model_type, 'No VASC')
         excludebvals = excludebvals,...
         solver = opts.solver    );
 
-% Reduced Radii in fitting    
-elseif strcmp(model_type, 'No VASC Reduced Rs')
+% Reduced Radii in fitting  Rs = [3,6,9,12]  
+elseif strcmp(model_type, 'No VASC Reduced Rs 1')
+
+    ncompart = 1;
+    excludebvals = [90];
+    Rs = linspace(3,12,4);
+
+    % Run VERDICT processing code
+    [scheme, Y, fIC, fEES, fVASC, R] = verdict_Adam( ...
+        convertStringsToChars(DICOM_path), ...
+        convertStringsToChars(output_path), ...
+        ncompart = ncompart, ...
+        Rs = Rs,...
+        solver = opts.solver    );
+
+
+ % Reduced Radii in fitting  Rs = [6,8,10,12]  
+elseif strcmp(model_type, 'No VASC Reduced Rs 2')
 
     ncompart = 1;
     excludebvals = [90];
@@ -66,6 +82,38 @@ elseif strcmp(model_type, 'No VASC Reduced Rs')
         ncompart = ncompart, ...
         Rs = Rs,...
         solver = opts.solver    );
+
+
+% Reduced Radii in fitting  Rs = [2,4,6,8]  
+elseif strcmp(model_type, 'No VASC Reduced Rs 3')
+
+    ncompart = 1;
+    excludebvals = [90];
+    Rs = linspace(2,8,4);
+
+    % Run VERDICT processing code
+    [scheme, Y, fIC, fEES, fVASC, R] = verdict_Adam( ...
+        convertStringsToChars(DICOM_path), ...
+        convertStringsToChars(output_path), ...
+        ncompart = ncompart, ...
+        Rs = Rs,...
+        solver = opts.solver    );
+
+% Reduced Radii in fitting  Rs = [4,6,8,10]  
+elseif strcmp(model_type, 'No VASC Reduced Rs 4')
+
+    ncompart = 1;
+    excludebvals = [90];
+    Rs = linspace(4,10,4);
+
+    % Run VERDICT processing code
+    [scheme, Y, fIC, fEES, fVASC, R] = verdict_Adam( ...
+        convertStringsToChars(DICOM_path), ...
+        convertStringsToChars(output_path), ...
+        ncompart = ncompart, ...
+        Rs = Rs,...
+        solver = opts.solver    );
+
 
 else
     disp('Incorrect model specification')

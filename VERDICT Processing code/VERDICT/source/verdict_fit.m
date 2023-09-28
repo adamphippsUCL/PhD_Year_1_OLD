@@ -133,7 +133,7 @@ for ip = 1:length(locinmask)  % can be parallelised
     y(y==inf) = 0;
     y(y==-inf) = 0;
     y(isnan(y)) = 0;
-    ip
+
     % Y = A x
     % Solving with x = lsqnonneg(A, y(:))
     %  is similar to x = mldivide(A,y(:))  or A\y(:)
