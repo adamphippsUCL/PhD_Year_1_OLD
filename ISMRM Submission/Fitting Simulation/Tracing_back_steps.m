@@ -9,6 +9,7 @@ V3 = [23.9, 43.8, 1500];
 V4 = [12.4, 32.3, 2000];
 V5 = [18.9, 38.8, 3000];
 
+% Addition of b=0
 Vs = [...
     V0; V1;...
     V0; V2;...
@@ -16,6 +17,15 @@ Vs = [...
     V0; V4;...
     V0; V5
     ];
+
+% % Without b=0
+% Vs = [...
+%     V1;
+%     V2;
+%     V3;
+%     V4;
+%     V5
+%     ];
 
 
 %% Define tissue parameters
@@ -26,12 +36,12 @@ fVASC = 0.1;
 fEES = 1-fIC-fVASC;
 
 % Spheres
-tissueRmin = 1;
+tissueRmin = 0.5;
 tissueRmax = 15;
 tissuenR = 100; % Number of radii
 
 % Noise level
-NoiseSigma = 0.03;
+NoiseSigma = 0.05;
 
 
 %% Iterations
@@ -45,7 +55,10 @@ Results2 = zeros(Niter, 3);
 
 for iterindx = 1:Niter
 
+
     [signals, Vscheme] = SimulateSignal(Vs, fIC, fVASC, tissueRmin, tissueRmax, tissuenR );
+
+    % Needed if b=0 scans included in scheme!!!
     signals(1:2:end) = 1;
     
     % Original VERDICT
@@ -60,7 +73,9 @@ for iterindx = 1:Niter
         0.1, ...
         15.1, ...
         17, ...
-        200);
+        200, ...
+        'lsqlin_underdetermined' ...
+        );
 
     Results0(iterindx,:) = [rmse0, bias0, variance0];
     
@@ -76,11 +91,13 @@ for iterindx = 1:Niter
         0.1, ...
         15.1, ...
         17, ...
-        200);
+        200, ...
+        'lsqlin_underdetermined' ...
+        );
 
     % Append results
     Results1(iterindx,:) = [rmse1, bias1, variance1];
-    
+%     
     % Reduced Rs
     ncompart = 1;
     [rmse2, bias2, variance2] = TestFitting( ...
@@ -90,10 +107,11 @@ for iterindx = 1:Niter
         fVASC, ...
         NoiseSigma, ...
         ncompart, ...
-        7.5, ...
-        12.5, ...
-        10,  ...
-        200);
+        6, ...
+        12, ...
+        4,  ...
+        200,...
+        'lsqlin_well_determined');
 
     % Append results
     Results2(iterindx,:) = [rmse2, bias2, variance2];

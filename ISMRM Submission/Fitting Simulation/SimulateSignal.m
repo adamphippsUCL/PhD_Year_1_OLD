@@ -18,6 +18,9 @@ fEES = 1-fIC-fVASC;
 % Random radii
 Rs = Rmin + (Rmax - Rmin)*rand(1,nR);
 
+% % % Linspace radii
+% Rs = linspace(Rmin, Rmax, nR);
+
 % Random volume fractions
 % fRs = zeros(1,length(Rs));
 % for indx =1:length(Rs)
@@ -25,6 +28,11 @@ Rs = Rmin + (Rmax - Rmin)*rand(1,nR);
 % end
 
 fRs = rand(1,length(Rs));
+% fRs = ones(1, length(Rs));
+ 
+% % Normal distributions adaptation!
+% fRs = normpdf(Rs,8,2);
+
 fRs = fIC*fRs/sum(fRs);
 
 

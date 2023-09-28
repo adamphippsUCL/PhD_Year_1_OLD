@@ -10,3 +10,8 @@ Best classifier found with Youden Index (TP rate - FP rate)
 
 
 Boxplots with semi-transparent data points overlaid look good
+
+
+Specificity - denotes the proportion of subjects correctly given a negative assignment out of all subjects who are actually negative for the outcome
+
+Sensitivity - measures the proportion of subjects with an actual positive outcome (i.e., true positives + false negatives) who are correctly given a positive assignment (i.e., true positives only)

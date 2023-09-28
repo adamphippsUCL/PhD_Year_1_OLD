@@ -10,6 +10,7 @@ from scipy.io import loadmat
 import pandas as pd
 import pickle
 from sklearn.metrics import roc_curve, roc_auc_score
+import SimpleITK as sitk
 
 # Import DICOM from imgtools
 sys.path.insert(0, r'C:\Users\adam\OneDrive - University College London\UCL PhD\MRes Year\Project\MRes_Project\Prostate MRI Project')
@@ -64,7 +65,15 @@ def saveROImask(
 
     # Remove duplicate spatial slices
     LesionMask = LesionMask[b3000_bVals == 0]
+    
+    print(np.sum(LesionMask, axis = (1,2)))
 
+    plt.figure()
+    plt.imshow(LesionMask[4])
+    plt.figure()
+    plt.imshow(b3000_ImageArray[4::5][4])
+    plt.show()
+    
     # Save lesion mask
     try:
         os.makedirs(f'{output_path}/{PatNum}')
@@ -72,7 +81,27 @@ def saveROImask(
         None
     np.save(f'{output_path}/{PatNum}/{ROIName}.npy', LesionMask)
                     
-                                  
+ 
+# Function for saving Nifti masks as npy arrays
+def saveNiftimask(
+    PatNum,
+    Nifti_INNOVATE_ROIs_path = r"D:\UCL PhD Imaging Data\Nifti INNOVATE ROIs",
+    output_path = r"C:\Users\adam\OneDrive - University College London\UCL PhD\PhD Year 1\PhD_Year_1\ISMRM Submission\ROIs"):
+    
+    # Read Nifti image
+    mask = sitk.GetArrayFromImage(
+        sitk.ReadImage(f'{Nifti_INNOVATE_ROIs_path}/{PatNum}.nii.gz')
+    )
+    
+    print(mask.shape)
+    plt.figure()
+    plt.imshow(mask[4])
+    plt.show()
+    
+    
+    
+saveNiftimask('INN_080')
+                                 
 # Function for extracting fIC values from ROI
 def extractROIfICs(
     PatNum,
@@ -257,9 +286,9 @@ def fIC_ROC(ModelType ):
     
    
    
-# for PatNum in ['BAR_003', 'BAR_004', 'BAR_005', 'BAR_006', 'BAR_009', 'BAR_033', 'INN_019']:
-#     saveROImask(PatNum, 'L1')
-#     extractROIfICs(PatNum, ROIName = 'L1', ModelType = 'Original')
+# # for PatNum in ['BAR_003', 'BAR_004', 'BAR_005', 'BAR_006', 'BAR_009', 'BAR_033', 'INN_019']:
+# #     saveROImask(PatNum, 'L1')
+# #     extractROIfICs(PatNum, ROIName = 'L1', ModelType = 'Original')
         
-avgROIfICs('L1', 'Original')
-print( fIC_ROC('Original') )
+# avgROIfICs('L1', 'Original')
+# print( fIC_ROC('Original') )

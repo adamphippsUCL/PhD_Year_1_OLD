@@ -9,8 +9,8 @@ d = 2; % 10^-3 mm/s
 ADC = 0.0005;
 
 % Define range of radii
-Rmin = 4;
-Rmax = 18;
+Rmin = 5;
+Rmax = 15;
 dR = 0.1;
 Rs = Rmin:dR:Rmax;
 
@@ -23,7 +23,7 @@ Rcell = 10;
 
 % b values
 bMin = 500;
-bMax = 3000;
+bMax = 2000;
 db = 50;
 bs = bMin:db:bMax;
 
@@ -82,15 +82,15 @@ for Dindx = 1:length(Deltas)
 
             % Append to arrays
             Signal_array(Dindx, dindx, bindx) = signals( ceil( (Rcell-Rmin)/dR ) );
-            dSdR_array(Dindx, dindx, bindx) = dSdR( ceil( (Rcell-Rmin)/dR ) )*exp(-b*ADC);
+            Sensitivity_array(Dindx, dindx, bindx) = dSdR( ceil( (Rcell-Rmin)/dR ) )*exp(-b*ADC);
            
         end
     end
 end
 
 
-[M,I] = max(dSdR_array(:));
-[I1, I2, I3] = ind2sub( size(dSdR_array), I);
+[M,I] = max(Sensitivity_array(:));
+[I1, I2, I3] = ind2sub( size(Sensitivity_array), I);
 
 DeltaBest = Deltas(I1)
 deltaBest = deltas(I2)

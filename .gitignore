@@ -268,3 +268,51 @@ ISMRM Submission/VERDICT outputs/INN_290/Original/Y.mat
 ISMRM Submission/Fitting Simulation/Figures/bias_results.png
 ISMRM Submission/Fitting Simulation/Figures/rmse_results.png
 ISMRM Submission/Fitting Simulation/Figures/variance_results.png
+ISMRM Submission/Fitting Simulation/Figures/Constrained Fitting/bias_results.png
+ISMRM Submission/Fitting Simulation/Figures/Constrained Fitting/parameter_sums.png
+ISMRM Submission/Fitting Simulation/Figures/Constrained Fitting/rmse_results.png
+ISMRM Submission/Fitting Simulation/Figures/Constrained Fitting/variance_results.png
+ISMRM Submission/Fitting Simulation/Figures/fR fitting/1.png
+ISMRM Submission/Fitting Simulation/Figures/fR fitting/2.png
+ISMRM Submission/Fitting Simulation/Figures/fR fitting/3.png
+ISMRM Submission/Fitting Simulation/Figures/fR fitting/4.png
+ISMRM Submission/Fitting Simulation/Figures/fR fitting/5.png
+ISMRM Submission/Fitting Simulation/Figures/fR fitting/6.png
+ISMRM Submission/Fitting Simulation/Figures/fR fitting/7.png
+ISMRM Submission/Fitting Simulation/Figures/fR fitting/8.png
+ISMRM Submission/fIC results/BAR_017/L1/Original.npy
+ISMRM Submission/fIC results/BAR_028/L1/Original.npy
+ISMRM Submission/fIC results/BAR_035/L1/Original.npy
+ISMRM Submission/fIC results/INN_087/L1/Original.npy
+ISMRM Submission/fIC results/INN_099/L1/Original.npy
+ISMRM Submission/fIC results/INN_109/L1/Original.npy
+ISMRM Submission/ROIs/BAR_017/L1.npy
+ISMRM Submission/ROIs/BAR_028/L1.npy
+ISMRM Submission/ROIs/BAR_035/L1.npy
+ISMRM Submission/ROIs/INN_087/L1.npy
+ISMRM Submission/ROIs/INN_099/L1.npy
+ISMRM Submission/ROIs/INN_109/L1.npy
+20230825 New VERDICT scheme simulation/Parameter choices/Figures/grid search/Sensitivity at R = 8, b = 750 ADC = 0.0008.png
+20230825 New VERDICT scheme simulation/Parameter choices/Figures/grid search/Sensitivity at R = 8, delta = 11 ADC = 0.0008.png
+20230825 New VERDICT scheme simulation/Parameter choices/Figures/grid search/Sensitivity at R = 8, Delta = 16 ADC = 0.0008.png
+20230825 New VERDICT scheme simulation/Parameter choices/Figures/grid search/Sensitivity at R = 10, b = 750 ADC = 0.0008.png
+20230825 New VERDICT scheme simulation/Parameter choices/Figures/grid search/Sensitivity at R = 10, b = 1100 ADC = 0.0005.png
+20230825 New VERDICT scheme simulation/Parameter choices/Figures/grid search/Sensitivity at R = 10, delta = 17 ADC = 0.0008.png
+20230825 New VERDICT scheme simulation/Parameter choices/Figures/grid search/Sensitivity at R = 10, delta = 21 ADC = 0.0005.png
+20230825 New VERDICT scheme simulation/Parameter choices/Figures/grid search/Sensitivity at R = 10, Delta = 26 ADC = 0.0008.png
+20230825 New VERDICT scheme simulation/Parameter choices/Figures/grid search/Sensitivity at R = 10, Delta = 30 ADC = 0.0005.png
+20230825 New VERDICT scheme simulation/Parameter choices/Figures/grid search/Sensitivity at R = 12, b = 750 ADC = 0.0008.png
+20230825 New VERDICT scheme simulation/Parameter choices/Figures/grid search/Sensitivity at R = 12, delta = 25 ADC = 0.0008.png
+20230825 New VERDICT scheme simulation/Parameter choices/Figures/grid search/Sensitivity at R = 12, Delta = 38 ADC = 0.0008.png
+20230825 New VERDICT scheme simulation/Parameter choices/Figures/grid search/Signal at R = 8, b = 750 ADC = 0.0008.png
+20230825 New VERDICT scheme simulation/Parameter choices/Figures/grid search/Signal at R = 8, delta = 11 ADC = 0.0008.png
+20230825 New VERDICT scheme simulation/Parameter choices/Figures/grid search/Signal at R = 8, Delta = 16 ADC = 0.0008.png
+20230825 New VERDICT scheme simulation/Parameter choices/Figures/grid search/Signal at R = 10, b = 750 ADC = 0.0008.png
+20230825 New VERDICT scheme simulation/Parameter choices/Figures/grid search/Signal at R = 10, b = 1100 ADC = 0.0005.png
+20230825 New VERDICT scheme simulation/Parameter choices/Figures/grid search/Signal at R = 10, delta = 17 ADC = 0.0008.png
+20230825 New VERDICT scheme simulation/Parameter choices/Figures/grid search/Signal at R = 10, delta = 21 ADC = 0.0005.png
+20230825 New VERDICT scheme simulation/Parameter choices/Figures/grid search/Signal at R = 10, Delta = 26 ADC = 0.0008.png
+20230825 New VERDICT scheme simulation/Parameter choices/Figures/grid search/Signal at R = 10, Delta = 30 ADC = 0.0005.png
+20230825 New VERDICT scheme simulation/Parameter choices/Figures/grid search/Signal at R = 12, b = 750 ADC = 0.0008.png
+20230825 New VERDICT scheme simulation/Parameter choices/Figures/grid search/Signal at R = 12, delta = 25 ADC = 0.0008.png
+20230825 New VERDICT scheme simulation/Parameter choices/Figures/grid search/Signal at R = 12, Delta = 38 ADC = 0.0008.png

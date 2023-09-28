@@ -129,6 +129,11 @@ for ip = 1:length(locinmask)  % can be parallelised
     ind = locinmask(ip) ;
     y = Y(ind,:) ;
 
+    % Remove infinties and NaN
+    y(y==inf) = 0;
+    y(y==-inf) = 0;
+    y(isnan(y)) = 0;
+    ip
     % Y = A x
     % Solving with x = lsqnonneg(A, y(:))
     %  is similar to x = mldivide(A,y(:))  or A\y(:)
@@ -141,8 +146,45 @@ for ip = 1:length(locinmask)  % can be parallelised
     %     x = B(:,1) ;
 
     switch solver
+
+        case 'lsqlin_well_determined'
+
+            [m,n] = size(A);
+       
+
+            % == Constraint sum(y) = 1
+            Aeq = zeros(n,n);
+            Aeq(1,:) = 1.0;
+
+            beq = zeros(n,1);
+            beq(1) = 1;
+
+            x = lsqlin(A, y(:), [],[], Aeq, beq, zeros(n,1), ones(n,1));
+
+        case 'lsqlin_underdetermined'
+
+            nUnknown = size(A,2) ;
+            lambda = sqrt(1e-3) ;
+            L = eye(nUnknown) ;
+
+            AT = [A; lambda*L] ;
+            YT = [y(:) ; zeros([nUnknown 1])] ;
+
+            [m,n] = size(A);
+    
+            % == Constraint sum(y) = 1
+            Aeq = zeros(n,n);
+            Aeq(1,:) = 1.0;
+
+            beq = zeros(n,1);
+            beq(1) = 1;
+
+            x = lsqlin(AT, YT(:), [],[], Aeq, beq, zeros(n,1), ones(n,1));
+
+
         case 'lsqnonneg'
             x = lsqnonneg(A, y(:)) ;
+
         case 'lsqnonnegTikonhov'
             nUnknown = size(A,2) ;
             lambda = sqrt(1e-3) ;
