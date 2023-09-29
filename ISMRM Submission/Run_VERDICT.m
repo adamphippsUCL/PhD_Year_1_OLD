@@ -2,7 +2,7 @@
 
 % Define list of patient numbers
 PatNums = [...
-    "BAR_003",...
+    "BAR_009",...
 %     "BAR_005",...
 %     "BAR_006",...
 %     "BAR_009",...
@@ -19,53 +19,53 @@ PatNums = [...
     ];
 
 
-%% Original model 
-
-% Model type
-ModelType = "Original";
-solver = 'lsqnonnegTikonhov';
-
-% Run VERDICT processing
-for PatNum = PatNums
-    disp(["----------->" PatNum])
-    VERDICT(PatNum, ModelType, solver = solver);
-end
-
-%% No VASC model
-
-% Model type
-ModelType = "No VASC";
-solver = 'lsqnonnegTikonhov';
-
-% Run VERDICT processing
-for PatNum = PatNums
-    disp(["----------->" PatNum])
-    VERDICT(PatNum, ModelType, solver = solver);
-end
-
-%% No VASC Reduced Rs 1
-
-% Model type
-ModelType = "No VASC Reduced Rs 1";
-solver = 'lsqnonneg';
-
-% Run VERDICT processing
-for PatNum = PatNums
-    disp(["----------->" PatNum])
-    VERDICT(PatNum, ModelType, solver = solver);
-end
-
-%% No VASC Reduced Rs 2
-
-% Model type
-ModelType = "No VASC Reduced Rs 2";
-solver = 'lsqnonneg';
-
-% Run VERDICT processing
-for PatNum = PatNums
-    disp(["----------->" PatNum])
-    VERDICT(PatNum, ModelType, solver = solver);
-end
+% %% Original model 
+% 
+% % Model type
+% ModelType = "Original";
+% solver = 'lsqnonnegTikonhov';
+% 
+% % Run VERDICT processing
+% for PatNum = PatNums
+%     disp(["----------->" PatNum])
+%     VERDICT(PatNum, ModelType, solver = solver);
+% end
+% 
+% %% No VASC model
+% 
+% % Model type
+% ModelType = "No VASC";
+% solver = 'lsqnonnegTikonhov';
+% 
+% % Run VERDICT processing
+% for PatNum = PatNums
+%     disp(["----------->" PatNum])
+%     VERDICT(PatNum, ModelType, solver = solver);
+% end
+% 
+% %% No VASC Reduced Rs 1
+% 
+% % Model type
+% ModelType = "No VASC Reduced Rs 1";
+% solver = 'lsqnonneg';
+% 
+% % Run VERDICT processing
+% for PatNum = PatNums
+%     disp(["----------->" PatNum])
+%     VERDICT(PatNum, ModelType, solver = solver);
+% end
+% 
+% %% No VASC Reduced Rs 2
+% 
+% % Model type
+% ModelType = "No VASC Reduced Rs 2";
+% solver = 'lsqnonneg';
+% 
+% % Run VERDICT processing
+% for PatNum = PatNums
+%     disp(["----------->" PatNum])
+%     VERDICT(PatNum, ModelType, solver = solver);
+% end
 
 %% No VASC Reduced Rs 3
 

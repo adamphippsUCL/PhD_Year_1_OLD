@@ -316,3 +316,192 @@ ISMRM Submission/ROIs/INN_109/L1.npy
 20230825 New VERDICT scheme simulation/Parameter choices/Figures/grid search/Signal at R = 12, b = 750 ADC = 0.0008.png
 20230825 New VERDICT scheme simulation/Parameter choices/Figures/grid search/Signal at R = 12, delta = 25 ADC = 0.0008.png
 20230825 New VERDICT scheme simulation/Parameter choices/Figures/grid search/Signal at R = 12, Delta = 38 ADC = 0.0008.png
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC/fEES.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC/fIC.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC/fVASC.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC/R.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC/scheme.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC/Y.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs/fEES.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs/fIC.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs/fIC.mha
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs/fVASC.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs/R.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs/R.mha
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs/scheme.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs/Y.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs 1/fEES.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs 1/fIC.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs 1/fVASC.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs 1/R.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs 1/scheme.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs 1/Y.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs 2/fEES.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs 2/fIC.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs 2/fVASC.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs 2/R.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs 2/scheme.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs 2/Y.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs 3/fEES.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs 3/fIC.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs 3/fVASC.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs 3/R.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs 3/scheme.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs 3/Y.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs 4/fEES.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs 4/fIC.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs 4/fVASC.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs 4/R.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs 4/scheme.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs 4/Y.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC/fEES.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC/fIC.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC/fVASC.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC/R.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC/scheme.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC/Y.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs/fEES.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs/fIC.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs/fIC.mha
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs/fVASC.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs/R.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs/R.mha
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs/scheme.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs/Y.mat
+.gitignore
+.gitignore
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs/fEES.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs/fIC.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs/fIC.mha
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs/fVASC.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs/R.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs/R.mha
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs/scheme.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs/Y.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC/fEES.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC/fIC.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC/fVASC.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC/R.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC/scheme.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC/Y.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs/fEES.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs/fIC.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs/fIC.mha
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs/fVASC.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs/R.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs/R.mha
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs/scheme.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs/Y.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC/fEES.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC/fIC.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC/fVASC.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC/R.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC/scheme.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC/Y.mat
+20230912 Simplified VERDICT model/ISMRM2324
+.gitignore
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC/fEES.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC/fIC.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC/fIC.mha
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC/fVASC.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC/R.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC/scheme.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC/Y.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs/fEES.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs/fIC.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs/fIC.mha
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs/fVASC.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs/R.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs/R.mha
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs/scheme.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs/Y.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs 1/fIC.mha
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs 2/fIC.mha
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs 3/fIC.mha
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs 4/fIC.mha
+ISMRM Submission/VERDICT outputs/BAR_003/Original/fIC.mha
+ISMRM Submission/VERDICT outputs/BAR_006/Original/fIC.mha
+ISMRM Submission/VERDICT outputs/BAR_009/No VASC/fEES.mat
+ISMRM Submission/VERDICT outputs/BAR_009/No VASC/fIC.mat
+ISMRM Submission/VERDICT outputs/BAR_009/No VASC/fIC.mha
+ISMRM Submission/VERDICT outputs/BAR_009/No VASC/fVASC.mat
+ISMRM Submission/VERDICT outputs/BAR_009/No VASC/R.mat
+ISMRM Submission/VERDICT outputs/BAR_009/No VASC/scheme.mat
+ISMRM Submission/VERDICT outputs/BAR_009/No VASC/Y.mat
+ISMRM Submission/VERDICT outputs/BAR_009/No VASC Reduced Rs 1/fEES.mat
+ISMRM Submission/VERDICT outputs/BAR_009/No VASC Reduced Rs 1/fIC.mat
+ISMRM Submission/VERDICT outputs/BAR_009/No VASC Reduced Rs 1/fIC.mha
+ISMRM Submission/VERDICT outputs/BAR_009/No VASC Reduced Rs 1/fVASC.mat
+ISMRM Submission/VERDICT outputs/BAR_009/No VASC Reduced Rs 1/R.mat
+ISMRM Submission/VERDICT outputs/BAR_009/No VASC Reduced Rs 1/scheme.mat
+ISMRM Submission/VERDICT outputs/BAR_009/No VASC Reduced Rs 1/Y.mat
+ISMRM Submission/VERDICT outputs/BAR_009/No VASC Reduced Rs 2/fEES.mat
+ISMRM Submission/VERDICT outputs/BAR_009/No VASC Reduced Rs 2/fIC.mat
+ISMRM Submission/VERDICT outputs/BAR_009/No VASC Reduced Rs 2/fIC.mha
+ISMRM Submission/VERDICT outputs/BAR_009/No VASC Reduced Rs 2/fVASC.mat
+ISMRM Submission/VERDICT outputs/BAR_009/No VASC Reduced Rs 2/R.mat
+ISMRM Submission/VERDICT outputs/BAR_009/No VASC Reduced Rs 2/scheme.mat
+ISMRM Submission/VERDICT outputs/BAR_009/No VASC Reduced Rs 2/Y.mat
+ISMRM Submission/VERDICT outputs/BAR_009/No VASC Reduced Rs 3/fEES.mat
+ISMRM Submission/VERDICT outputs/BAR_009/No VASC Reduced Rs 3/fIC.mat
+ISMRM Submission/VERDICT outputs/BAR_009/No VASC Reduced Rs 3/fIC.mha
+ISMRM Submission/VERDICT outputs/BAR_009/No VASC Reduced Rs 3/fVASC.mat
+ISMRM Submission/VERDICT outputs/BAR_009/No VASC Reduced Rs 3/R.mat
+ISMRM Submission/VERDICT outputs/BAR_009/No VASC Reduced Rs 3/scheme.mat
+ISMRM Submission/VERDICT outputs/BAR_009/No VASC Reduced Rs 3/Y.mat
+ISMRM Submission/VERDICT outputs/BAR_009/No VASC Reduced Rs 4/fEES.mat
+ISMRM Submission/VERDICT outputs/BAR_009/No VASC Reduced Rs 4/fIC.mat
+ISMRM Submission/VERDICT outputs/BAR_009/No VASC Reduced Rs 4/fIC.mha
+ISMRM Submission/VERDICT outputs/BAR_009/No VASC Reduced Rs 4/fVASC.mat
+ISMRM Submission/VERDICT outputs/BAR_009/No VASC Reduced Rs 4/R.mat
+ISMRM Submission/VERDICT outputs/BAR_009/No VASC Reduced Rs 4/scheme.mat
+ISMRM Submission/VERDICT outputs/BAR_009/No VASC Reduced Rs 4/Y.mat
+ISMRM Submission/VERDICT outputs/BAR_009/Original/fIC.mha
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC/fEES.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC/fIC.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC/fIC.mha
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC/fVASC.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC/R.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC/scheme.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC/Y.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs/fEES.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs/fIC.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs/fIC.mha
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs/fVASC.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs/R.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs/R.mha
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs/scheme.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs/Y.mat
+ISMRM Submission/VERDICT outputs/BAR_003/Original/fIC.mha
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC/fEES.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC/fIC.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC/fIC.mha
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC/fVASC.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC/R.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC/scheme.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC/Y.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs/fEES.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs/fIC.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs/fIC.mha
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs/fVASC.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs/R.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs/R.mha
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs/scheme.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC Reduced Rs/Y.mat
+ISMRM Submission/VERDICT outputs/BAR_003/Original/fIC.mha
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC/fEES.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC/fIC.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC/fIC.mha
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC/fVASC.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC/R.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC/scheme.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC/Y.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC/fEES.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC/fIC.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC/fIC.mha
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC/fVASC.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC/R.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC/scheme.mat
+ISMRM Submission/VERDICT outputs/BAR_003/No VASC/Y.mat
+ISMRM Submission/VERDICT outputs/BAR_003/Original/fIC.mha
+ISMRM Submission/VERDICT outputs/BAR_003/Original/fIC.mha
