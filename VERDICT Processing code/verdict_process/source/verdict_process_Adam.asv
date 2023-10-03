@@ -265,7 +265,7 @@ end
 dicomdict("factory")
 
 [dinfo, vSeriesNumbers, vBV, dinfoT2ax, T2axSeriesNumbers, vMAT, dscheme] = getSeriesVERDICT(dfolder, allowedSeriesNumbers = opts.allowedSeriesNumbers, ...
-    excludebvals = opts.series_excludebvals) ;
+    excludebvals = opts.excludebvals) ;
 
 
 if isempty(dinfo)
@@ -729,44 +729,36 @@ nRow = length(row2Y4) ;
 
 % % append(rpt,Chapter('Fitting'))
 
+% ===== PERFORM FIT
 
 %% ADAM ADDITIONS
 
-% == Mask for fitting
-
-% Check if mask has been inputted
-if exist('opts.mask', 'var')
+% == Check if mask has been inputted
+if opts.mask
     disp('Input mask');
-
-else % Bounding box mask (Not sure why input isn't working)
-    disp('no mask')
-    opts.mask = zeros([size(vb0,[1 2 3])]) ;
-    opts.mask(44:132,44:132,:) = 1;
+else
+    opts.mask = ones([size(vb0,[1 2 3])]) ;
 end
 
 
 % == Exclude b values from fitting!
 
-for bval = opts.fitting_excludebvals
-    
-    disp(['b value ' num2str(bval) ' removed for fitting'])
+for bval = opts.excludebvals
 
     % Find scheme index for b value
-    scheme_bools = ([scheme.bval] ~= bval);
+    scheme_Bools = ([scheme.bval] ~= b);
 
     % Exclude b value from scheme
     scheme = scheme(scheme_bools);
 
     % Exclude b value image from Y
     Y = Y(:,:,:,scheme_bools);
-    
+
 
 end
 
 
-%% Apply fitting
 
-% ===== PERFORM FIT
 
 [fIC, fEES, fVASC, R, rmse, A, tparams, vfopt] = verdict_fit(scheme,Y,Rs=Rs, ...
     solver=opts.solver, ncompart=opts.ncompart, mask = opts.mask) ;

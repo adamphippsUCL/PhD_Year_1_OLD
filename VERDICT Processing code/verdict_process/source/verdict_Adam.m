@@ -55,8 +55,10 @@ arguments
     opts.allowedSeriesNumbers = [] % SeriesNumbers in this set can be used
     opts.forcedSchemeName = ''     % Force scheme name for debugginh
     opts.ncompart = '2'            % Number of tissue compartment beyond sphere (1 for EES, 2 for EES and VASC)
-    opts.excludebvals = []  % Exclude specific b values
+    opts.series_excludebvals = []  % Exclude specific b values from series
+    opts.fitting_excludebvals = [] % Exclude specific b values from fitting (logically inclusive of series_excludebvals)
     opts.Rs = [] % Specified Rs used in fitting
+    opts.mask = [] % Mask for fitting
 end
 
 % Set Release/Version tag here (will be output in report and .mat file)

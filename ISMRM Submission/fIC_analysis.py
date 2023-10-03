@@ -18,6 +18,7 @@ from imgtools import DICOM # type: ignore
 
 
 # Function for saving ROI masks
+'''NEED TO CHANGE DEFAULT INN_129 ROI'''
 def saveROImask(
                 PatNum, 
                 ROIName, 
@@ -66,13 +67,13 @@ def saveROImask(
     # Remove duplicate spatial slices
     LesionMask = LesionMask[b3000_bVals == 0]
     
-    print(np.sum(LesionMask, axis = (1,2)))
+    # print(np.sum(LesionMask, axis = (1,2)))
 
-    plt.figure()
-    plt.imshow(LesionMask[4])
-    plt.figure()
-    plt.imshow(b3000_ImageArray[4::5][4])
-    plt.show()
+    # plt.figure()
+    # plt.imshow(LesionMask[4])
+    # plt.figure()
+    # plt.imshow(b3000_ImageArray[4::5][4])
+    # plt.show()
     
     # Save lesion mask
     try:
@@ -98,15 +99,12 @@ def saveNiftimask(
     plt.imshow(mask[4])
     plt.show()
     
-    
-    
-saveNiftimask('INN_080')
-                                 
+           
 # Function for extracting fIC values from ROI
 def extractROIfICs(
     PatNum,
     ROIName,
-    ModelType,
+    ModelNum,
     VERDICT_output_path = r"C:\Users\adam\OneDrive - University College London\UCL PhD\PhD Year 1\PhD_Year_1\ISMRM Submission\VERDICT outputs",
     ROI_path = r"C:\Users\adam\OneDrive - University College London\UCL PhD\PhD Year 1\PhD_Year_1\ISMRM Submission\ROIs",
     output_path = r"C:\Users\adam\OneDrive - University College London\UCL PhD\PhD Year 1\PhD_Year_1\ISMRM Submission\fIC results",
@@ -118,7 +116,7 @@ def extractROIfICs(
     '''                
     
     # Load fIC array
-    fIC = loadmat(f'{VERDICT_output_path}/{PatNum}/{ModelType}/fIC.mat')['fIC']
+    fIC = loadmat(f'{VERDICT_output_path}/{PatNum}/Model {ModelNum}/fIC.mat')['fIC']
     # Permute array axes (account for MATLAB Python differences)
     fIC = np.moveaxis( fIC , -1, 0)   
     
@@ -136,7 +134,7 @@ def extractROIfICs(
     except:
         None
         
-    np.save(f'{output_path}/{PatNum}/{ROIName}/{ModelType}.npy', ROI_fIC)
+    np.save(f'{output_path}/{PatNum}/{ROIName}/Model {ModelNum}.npy', ROI_fIC)
     
 
        
@@ -176,14 +174,14 @@ def readBiopsyResults(
 # Function to calculate avg fIC over ROIs
 def avgROIfICs(
     ROIName,
-    ModelType,
+    ModelNum,
     avg_type = 'mean',
     results_path = r'C:\Users\adam\OneDrive - University College London\UCL PhD\PhD Year 1\PhD_Year_1\ISMRM Submission\fIC results'
     
 ):
     
     # Extract list of fIC results filenames
-    fIC_fnames = glob.glob(f'{results_path}/*/{ROIName}/{ModelType}.npy')
+    fIC_fnames = glob.glob(f'{results_path}/*/{ROIName}/Model {ModelNum}.npy')
     
     # For each file, extract patient number and calculate average fIC
     PatNums = []
@@ -217,19 +215,28 @@ def avgROIfICs(
         avgfICs.append(avg_fIC)
         
         
-        # Create dataframe
-        fIC_DF = pd.DataFrame({'Patient ID': PatNums, 'Avg fIC': avgfICs})
+    # Create dataframe
+    fIC_DF = pd.DataFrame({'Patient ID': PatNums, 'Avg fIC': avgfICs})
+
+    print(fIC_DF)
+    # Create directory
+    try:
+        os.makedirs(f'{results_path}/Average fIC Dataframes/Model {ModelNum}')
+    except:
+        None
         
-        # Create directory
-        # Save dataframe as pickle
-        with open('fIC results/average_fIC_df.pickle', 'wb') as handle:
-            pickle.dump(fIC_DF, handle, protocol=pickle.HIGHEST_PROTOCOL)
-            
+    # Save dataframe as pickle
+    with open(f'{results_path}/Average fIC Dataframes/Model {ModelNum}/average_fIC_df.pickle', 'wb') as handle:
+        pickle.dump(fIC_DF, handle, protocol=pickle.HIGHEST_PROTOCOL)
+        
 
 # avgROIfICs(ROIName = 'L1', ModelType = 'No VASC')
         
     
-def fIC_ROC(ModelType ):
+def fIC_ROC(
+    ModelNum,
+    results_path = r'C:\Users\adam\OneDrive - University College London\UCL PhD\PhD Year 1\PhD_Year_1\ISMRM Submission\fIC results'
+    ):
     
     '''
     Python function to generate ROC curve for lesion classification from 
@@ -244,7 +251,7 @@ def fIC_ROC(ModelType ):
     '''
     
     # Read in average fIC dataframe
-    with open('fIC results/average_fIC_df.pickle', 'rb') as handle:
+    with open(f'{results_path}/Average fIC Dataframes/Model {ModelNum}/average_fIC_df.pickle', 'rb') as handle:
         fIC_DF = pickle.load(handle)
         
 
@@ -272,6 +279,7 @@ def fIC_ROC(ModelType ):
     # Make arrays
     fICs = np.asarray(fICs)    
     BiopsyResults = np.asarray(BiopsyResults)
+    print(fICs, BiopsyResults)
     
     # Create ROC curve
     fpr, tpr, thresholds = roc_curve(y_true = BiopsyResults, y_score = fICs)

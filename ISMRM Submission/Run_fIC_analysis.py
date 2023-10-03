@@ -10,33 +10,34 @@ import os
 import fIC_analysis
 
 # First define model type to analyse
-ModelType = 'Original'
+ModelNum = 1
 
 # Find list of patients
-fnames = glob.glob(f'VERDICT outputs/*/{ModelType}/fIC.mat')
+fnames = glob.glob(f'VERDICT outputs/*/Model {ModelNum}/fIC.mat')
+
 PatNums = [ os.path.split( os.path.split( os.path.split(fname)[0])[0])[1] for fname in fnames  ]
 
 
-# # For each patient, save lesion ROI masks and extract fICs
-# for PatNum in PatNums:
+# For each patient, save lesion ROI masks and extract fICs
+for PatNum in PatNums:
     
-#     print(PatNum)
-#     # Lesion mask
-#     fIC_analysis.saveROImask(PatNum, ROIName = 'L1')
+    # Lesion mask
+    fIC_analysis.saveROImask(PatNum, ROIName = 'L1')
     
-#     # Extract fICs
-#     fIC_analysis.extractROIfICs(PatNum, ROIName = 'L1', ModelType = ModelType)
+    # Extract fICs
+    fIC_analysis.extractROIfICs(PatNum, ROIName = 'L1', ModelNum = ModelNum)
     
   
 # Calculate median fICs  
-fIC_analysis.avgROIfICs(ROIName = 'L1', ModelType = 'Original', avg_type = 'median')
+fIC_analysis.avgROIfICs(ROIName = 'L1', ModelNum = ModelNum, avg_type = 'median')
 
 # Apply ROC analysis
-fpr, tpr, thresholds, roc_auc = fIC_analysis.fIC_ROC(ModelType = 'Original')
+fpr, tpr, thresholds, roc_auc = fIC_analysis.fIC_ROC(ModelNum = ModelNum)
 
 Youden_Indices = tpr-fpr
 
-print(thresholds[Youden_Indices == np.max(Youden_Indices)])
+print(f'Thresholds: {thresholds}')
+print(f' Best threshold: {thresholds[Youden_Indices == np.max(Youden_Indices)]}')
 
 print(roc_auc)
 plt.figure()

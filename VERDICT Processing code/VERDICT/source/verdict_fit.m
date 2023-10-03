@@ -72,7 +72,6 @@ nscheme = length(scheme) ;
 szY = size(Y) ;
 szmap = szY(1:end-1) ;
 
-
 if ~exist('opt','var') || isempty(opt.mask)
     opt.mask = ones(szmap) ;
 end
@@ -129,6 +128,8 @@ for ip = 1:length(locinmask)  % can be parallelised
     ind = locinmask(ip) ;
     y = Y(ind,:) ;
 
+    percent_done = (ip/length(locinmask))*100
+    
     % Remove infinties and NaN
     y(y==inf) = 0;
     y(y==-inf) = 0;

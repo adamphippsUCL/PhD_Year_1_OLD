@@ -4,22 +4,24 @@
 import SimpleITK as sitk
 from scipy.io import loadmat
 import numpy as np
+import sys
 
 # Define Patient ID, model type, and volume name
-PatNum = 'BAR_009'
-ModelTypes = ['Original', 'No VASC', 'No VASC Reduced Rs 1', 'No VASC Reduced Rs 2', 'No VASC Reduced Rs 3', 'No VASC Reduced Rs 4']
+PatNum = 'BAR_012'
+ModelNumbers = list(range(1,11))
+
 VolumeName = 'fIC'
 
-for ModelType in ModelTypes:
+for ModelNum in ModelNumbers:
     # Load .mat file
-    volume = loadmat(f'VERDICT outputs/{PatNum}/{ModelType}/{VolumeName}.mat')[VolumeName]
+    volume = loadmat(f'VERDICT outputs/{PatNum}/Model {ModelNum}/{VolumeName}.mat')[VolumeName]
     # remove infinities
     volume[volume == np.inf] = 0
     # Change image orientation
     volume = np.moveaxis( volume , -1, 0)  
 
     # Save as mha file
-    sitk.WriteImage( sitk.GetImageFromArray(volume), f'VERDICT outputs/{PatNum}/{ModelType}/{VolumeName}.mha' )
+    sitk.WriteImage( sitk.GetImageFromArray(volume), f'VERDICT outputs/{PatNum}/Model {ModelNum}/{VolumeName}.mha' )
 
 
 

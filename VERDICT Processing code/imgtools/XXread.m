@@ -184,7 +184,9 @@ end
 
 dict = dicomdict('get') ;
 dicomdict('factory');
-dinfo = dicominfo(file_name) ;
+
+% ==== Changed to true!!!!!
+dinfo = dicominfo(file_name, UseDictionaryVR = true ) ;
 dicomdict('set',dict) ; 
 
 if isfield(dinfo,'SeriesNumber'), xxinfo.SeriesNumber = dinfo.SeriesNumber; end
