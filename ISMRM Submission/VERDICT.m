@@ -17,6 +17,11 @@ end
 
 % Define DICOM folder path
 DICOM_path = join( [opts.INNOVATE_path pat_num "\scans"], "");
+if exist(DICOM_path, "dir")
+    disp('')
+else
+    DICOM_path = join( [opts.INNOVATE_path pat_num], "");
+end
 
 % Define output folder
 output_path = join([opts.parent_folder "/VERDICT outputs/" pat_num "/" model_type], "");
@@ -28,8 +33,8 @@ end
 
 % Define options for model type
 
-% Original VERDICT model
-if strcmp(model_type, 'Original')
+% Model 1: Original VERDICT
+if strcmp(model_type, 'Model 1')
     
     % Run VERDICT processing code
     [scheme, Y, fIC, fEES, fVASC, R] = verdict_Adam( ...
@@ -38,26 +43,27 @@ if strcmp(model_type, 'Original')
         solver = opts.solver...    
         );
 
-% No VASC compartment model
-elseif strcmp(model_type, 'No VASC')
+% Model 2: No VASC, original Rs
+elseif strcmp(model_type, 'Model 2')
 
     ncompart = 1;
-    excludebvals = [90];
+    fitting_excludebvals = [90];
 
     % Run VERDICT processing code
     [scheme, Y, fIC, fEES, fVASC, R] = verdict_Adam( ...
         convertStringsToChars(DICOM_path), ...
         convertStringsToChars(output_path), ...
         ncompart = ncompart, ...
-        excludebvals = excludebvals,...
-        solver = opts.solver    );
+        fitting_excludebvals = fitting_excludebvals,...
+        solver = opts.solver...    
+        );
 
 
-% Reduced Radii in fitting  Rs = [0.1, 5.1, 10.1, 15.1]  
-elseif strcmp(model_type, 'No VASC Reduced Rs 1')
+% Model 3: No VASC, Reduced Rs = [0.1, 5.1, 10.1, 15.1]  
+elseif strcmp(model_type, 'Model 3')
 
     ncompart = 1;
-    excludebvals = [90];
+    fitting_excludebvals = [90];
     Rs = linspace(0.1,15.1,4);
 
     % Run VERDICT processing code
@@ -65,15 +71,17 @@ elseif strcmp(model_type, 'No VASC Reduced Rs 1')
         convertStringsToChars(DICOM_path), ...
         convertStringsToChars(output_path), ...
         ncompart = ncompart, ...
+        fitting_excludebvals = fitting_excludebvals,...
         Rs = Rs,...
-        solver = opts.solver    );
+        solver = opts.solver...    
+        );
 
 
-% Reduced Radii in fitting  Rs = [3,6,9,12]  
-elseif strcmp(model_type, 'No VASC Reduced Rs 2')
+% Model 4: No VASC, Reduced Rs = [3,6,9,12]  
+elseif strcmp(model_type, 'Model 4')
 
     ncompart = 1;
-    excludebvals = [90];
+    fitting_excludebvals = [90];
     Rs = linspace(3,12,4);
 
     % Run VERDICT processing code
@@ -81,15 +89,17 @@ elseif strcmp(model_type, 'No VASC Reduced Rs 2')
         convertStringsToChars(DICOM_path), ...
         convertStringsToChars(output_path), ...
         ncompart = ncompart, ...
+        fitting_excludebvals = fitting_excludebvals,...
         Rs = Rs,...
-        solver = opts.solver    );
+        solver = opts.solver...    
+        );
 
 
- % Reduced Radii in fitting  Rs = [6,9,12,15]  
-elseif strcmp(model_type, 'No VASC Reduced Rs 3')
+% Model 5: No VASC, Reduced Rs = [6,9,12,15]  
+elseif strcmp(model_type, 'Model 5')
 
     ncompart = 1;
-    excludebvals = [90];
+    fitting_excludebvals = [90];
     Rs = linspace(6,15,4);
 
     % Run VERDICT processing code
@@ -97,15 +107,17 @@ elseif strcmp(model_type, 'No VASC Reduced Rs 3')
         convertStringsToChars(DICOM_path), ...
         convertStringsToChars(output_path), ...
         ncompart = ncompart, ...
+        fitting_excludebvals = fitting_excludebvals,...
         Rs = Rs,...
-        solver = opts.solver    );
+        solver = opts.solver...    
+        );
 
 
-% Reduced Radii in fitting  Rs = [0.1,3.1,6.1,9.1]  
-elseif strcmp(model_type, 'No VASC Reduced Rs 4')
+% Model 6: No VASC, Reduced Rs = [0.1, 3.1, 6.1, 9.1]
+elseif strcmp(model_type, 'Model 6')
 
     ncompart = 1;
-    excludebvals = [90];
+    fitting_excludebvals = [90];
     Rs = linspace(0.1,9.1,4);
 
     % Run VERDICT processing code
@@ -113,23 +125,82 @@ elseif strcmp(model_type, 'No VASC Reduced Rs 4')
         convertStringsToChars(DICOM_path), ...
         convertStringsToChars(output_path), ...
         ncompart = ncompart, ...
+        fitting_excludebvals = fitting_excludebvals,...
         Rs = Rs,...
-        solver = opts.solver    );
+        solver = opts.solver...
+        );
 
-% Reduced Radii in fitting  Rs = [6,8,10,12]  
-elseif strcmp(model_type, 'No VASC Reduced Rs 5')
+% Model 7: No VASC, No 3000, Reduced Rs = [0.1, 7.6, 15.1]  
+elseif strcmp(model_type, 'Model 7')
 
     ncompart = 1;
-    excludebvals = [90];
-    Rs = linspace(6,12,4);
+    fitting_excludebvals = [90,3000];
+    Rs = linspace(0.1,15.1,3);
 
     % Run VERDICT processing code
     [scheme, Y, fIC, fEES, fVASC, R] = verdict_Adam( ...
         convertStringsToChars(DICOM_path), ...
         convertStringsToChars(output_path), ...
         ncompart = ncompart, ...
+        fitting_excludebvals = fitting_excludebvals,...
         Rs = Rs,...
-        solver = opts.solver    );
+        solver = opts.solver...    
+        );
+
+
+% Model 8: No VASC, No 3000, Reduced Rs = [3.75, 7.5, 11.25]  
+elseif strcmp(model_type, 'Model 8')
+
+    ncompart = 1;
+    fitting_excludebvals = [90,3000];
+    Rs = linspace(3.75, 11.25, 3);
+
+    % Run VERDICT processing code
+    [scheme, Y, fIC, fEES, fVASC, R] = verdict_Adam( ...
+        convertStringsToChars(DICOM_path), ...
+        convertStringsToChars(output_path), ...
+        ncompart = ncompart, ...
+        fitting_excludebvals = fitting_excludebvals,...
+        Rs = Rs,...
+        solver = opts.solver...    
+        );
+
+
+
+% Model 9: No VASC, No 3000, Reduced Rs = [7.5, 11.25, 15]  
+elseif strcmp(model_type, 'Model 9')
+
+    ncompart = 1;
+    fitting_excludebvals = [90,3000];
+    Rs = linspace(7.5, 15, 3);
+
+    % Run VERDICT processing code
+    [scheme, Y, fIC, fEES, fVASC, R] = verdict_Adam( ...
+        convertStringsToChars(DICOM_path), ...
+        convertStringsToChars(output_path), ...
+        ncompart = ncompart, ...
+        fitting_excludebvals = fitting_excludebvals,...
+        Rs = Rs,...
+        solver = opts.solver...    
+        );
+
+
+% Model 10: No VASC, No 3000, Reduced Rs = [0.1, 3.85, 7.6]  
+elseif strcmp(model_type, 'Model 10')
+
+    ncompart = 1;
+    fitting_excludebvals = [90, 3000];
+    Rs = linspace(0.1, 7.6, 3);
+
+    % Run VERDICT processing code
+    [scheme, Y, fIC, fEES, fVASC, R] = verdict_Adam( ...
+        convertStringsToChars(DICOM_path), ...
+        convertStringsToChars(output_path), ...
+        ncompart = ncompart, ...
+        fitting_excludebvals = fitting_excludebvals,...
+        Rs = Rs,...
+        solver = opts.solver...    
+        );
 
 
 else
