@@ -7,7 +7,7 @@ import numpy as np
 import sys
 
 # Define Patient ID, model type, and volume name
-PatNum = 'BAR_012'
+PatNum = 'BAR_025'
 ModelNumbers = list(range(1,11))
 
 VolumeName = 'fIC'

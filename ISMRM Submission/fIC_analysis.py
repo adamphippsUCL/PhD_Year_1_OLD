@@ -18,12 +18,11 @@ from imgtools import DICOM # type: ignore
 
 
 # Function for saving ROI masks
-'''NEED TO CHANGE DEFAULT INN_129 ROI'''
 def saveROImask(
                 PatNum, 
                 ROIName, 
                 INNOVATE_path = r"D:\UCL PhD Imaging Data\INNOVATE", 
-                INNOVATE_ROIs_path = r"D:\UCL PhD Imaging Data\test INNOVATE ROIs",
+                INNOVATE_ROIs_path = r"C:\Users\adam\OneDrive - University College London\UCL PhD\PhD Year 1\INNOVATE\INNOVATE ROIs",
                 output_path = r"C:\Users\adam\OneDrive - University College London\UCL PhD\PhD Year 1\PhD_Year_1\ISMRM Submission\ROIs"):
     
     '''
@@ -33,14 +32,39 @@ def saveROImask(
     
     '''
     
-    # Define path to DICOMs for patient
-    '''Using INN_129 as example image for all while testing!!! Make sure to change this'''
-    TESTPATNUM = 'INN_129'
-    Img_DICOM_path = f'{INNOVATE_path}/{TESTPATNUM}\scans'
-    
-    # Find filename for b3000 image
-    b3000_DICOM_fname = glob.glob(f'{Img_DICOM_path}/*b3000_80/DICOM/*')[0]
+    try:
+        # Define path to image DICOMs
+        Img_DICOM_path = rf"D:\UCL PhD Imaging Data\INNOVATE\{PatNum}\scans" 
 
+        # Find filename for b3000 image
+        b3000_DICOM_fnames = glob.glob(f'{Img_DICOM_path}/*b3000_80/DICOM/*')
+        
+        test_valid = b3000_DICOM_fnames[0]
+        
+    except:
+        # Define path to image DICOMs
+        Img_DICOM_path = rf"D:\UCL PhD Imaging Data\INNOVATE\{PatNum}" 
+
+        # Find filename for b3000 image
+        b3000_DICOM_fnames = glob.glob(f'{Img_DICOM_path}\*b3000_80\DICOM\*')
+
+
+    # Test if DICOM MF or SF
+    if len(b3000_DICOM_fnames) == 1:
+        # MF
+        b3000_DICOM_fname = b3000_DICOM_fnames[0]
+        b3000dcm = DICOM.MRIDICOM(b3000_DICOM_fname)
+        
+    elif len(b3000_DICOM_fnames) > 1:
+        # SF
+        multiframe = False
+        b3000dcm = DICOM.MRIDICOM(DICOM_fnames = b3000_DICOM_fnames, multiframe = multiframe)
+        
+    else:
+        print(f'No b3000 file for patient {PatNum}')
+        sys.exit()
+        
+        
     # Create dcm object 
     b3000dcm = DICOM.MRIDICOM(b3000_DICOM_fname)
     b3000_ImageArray = b3000dcm.constructImageArray()
@@ -83,6 +107,8 @@ def saveROImask(
     np.save(f'{output_path}/{PatNum}/{ROIName}.npy', LesionMask)
                     
  
+saveROImask('BAR_006', 'L1_b3000_NT')
+
 # Function for saving Nifti masks as npy arrays
 def saveNiftimask(
     PatNum,
