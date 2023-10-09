@@ -7,21 +7,28 @@ import numpy as np
 import sys
 
 # Define Patient ID, model type, and volume name
-PatNum = 'BAR_025'
-ModelNumbers = list(range(1,11))
+PatNum = 'BAR_038'
+ModelNumbers = list(range(1,15))
 
-VolumeName = 'fIC'
+VolumeName = 'vb0'
 
 for ModelNum in ModelNumbers:
-    # Load .mat file
-    volume = loadmat(f'VERDICT outputs/{PatNum}/Model {ModelNum}/{VolumeName}.mat')[VolumeName]
-    # remove infinities
-    volume[volume == np.inf] = 0
-    # Change image orientation
-    volume = np.moveaxis( volume , -1, 0)  
+    
+    try:
+        # Load .mat file
+        volume = loadmat(f'VERDICT outputs/{PatNum}/Model {ModelNum}/{VolumeName}.mat')[VolumeName]
+        # remove infinities
+        volume[volume == np.inf] = 0
+        # Remove nan
+        volume[np.isnan(volume)] = 0
+        
+        # Change image orientation
+        volume = np.moveaxis( volume , -1, 0)  
 
-    # Save as mha file
-    sitk.WriteImage( sitk.GetImageFromArray(volume), f'VERDICT outputs/{PatNum}/Model {ModelNum}/{VolumeName}.mha' )
+        # Save as mha file
+        sitk.WriteImage( sitk.GetImageFromArray(volume), f'VERDICT outputs/{PatNum}/Model {ModelNum}/{VolumeName}.mha' )
+        
+    except: None
 
 
 

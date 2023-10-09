@@ -66,6 +66,8 @@ arguments
     opt.ncompart = 2
 end
 
+
+
 nr = length(t.Rs) ;
 ncompart = opt.ncompart ; % number of compartments beyond radii. 2 for Classic, 1 to exclude vasc
 nscheme = length(scheme) ;

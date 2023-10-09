@@ -1,4 +1,4 @@
-function [scheme, Y,fIC, fEES, fVASC, R] = verdict_process_Adam(dfolder, output_folder, opts)
+function [scheme, Y,fIC, fEES, fVASC, R, rmse] = verdict_process_Adam(dfolder, output_folder, opts)
 % VERDICT_PROCESS VERDICT processing 
 %
 % See wrapping function VERDICT for how to call this function
@@ -268,6 +268,9 @@ dicomdict("factory")
     excludebvals = opts.series_excludebvals) ;
 
 
+
+
+
 if isempty(dinfo)
 % %     append(rpt,Paragraph(' '))
 % %     msg = 'NO INPUT FOUND. (Check file and path names / connection to networked or external drives)';
@@ -343,6 +346,8 @@ for iSeries = 1: nSeries
     [vb0, mb0, b0loc] = d2mat(dinfo,{'slice','bv','series'},'bv',0, ...
         'series',sn_this,'op','fp') ;
 
+
+
     TR(indsortedBV(iSeries)) = dinfo(b0loc(1)).RepetitionTime ;
     if isfield(dinfo,'EffectiveEchoTime')
         TE(indsortedBV(iSeries)) = dinfo(b0loc(1)).EffectiveEchoTime ;
@@ -413,6 +418,14 @@ for iSeries = 1: nSeries
     plotbv(iSeries) = bv_this ;
 
     if iSeries == 1 
+
+        %% ADAM SAVE b0 from b3000
+    
+        % Save vb0 so image flips can be dealt with!!!
+        save([convertStringsToChars(output_folder) '/vb0.mat'], 'vb0')
+
+        %%
+
         % first pass
         Y = zeros([size(vb0,[1 2 3]), (nbd + naddb0)*nSeries]) ;
         vb0tot = zeros(size(vb0));

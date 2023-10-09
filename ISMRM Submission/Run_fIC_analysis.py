@@ -13,32 +13,59 @@ import fIC_analysis
 # First define model type to analyse
 ModelNum = 1
 
+# ROI Name
+ROIName = 'L1_b3000_NT'
+
+
 # Find list of patients
 fnames = glob.glob(f'VERDICT outputs/*/Model {ModelNum}/fIC.mat')
 
 PatNums = [ os.path.split( os.path.split( os.path.split(fname)[0])[0])[1] for fname in fnames  ]
 
 
+# Create list for 'good PatNums' which have a well defined ROI from Natasha
+goodPatNums = []
+
 # For each patient, save lesion ROI masks and extract fICs
-for PatNum in PatNums:
+for indx, PatNum in enumerate(PatNums):
+     
+     
+    # # Check if ROI mask exists and extract fICs from lesion
+    # if os.path.isfile(f'ROIs/{PatNum}/{ROIName}.npy'):
+    #     goodPatNums.append(PatNum)
+    #     # Extract fICs
+    #     fIC_analysis.extractROIfICs(PatNum, ROIName = ROIName, ModelNum = ModelNum)
+    #     continue
+    # else:
+    #     print(f'No existing ROI mask for {PatNum}')
     
+    
+    # If ROI mask doesn't exist, try and extract ROI 
     try:
+        
         # Lesion mask
-        fIC_analysis.saveROImask(PatNum, ROIName = 'L1_b3000_NT')
+        fIC_analysis.saveROImask(PatNum, ROIName = ROIName)
         
         # Extract fICs
-        fIC_analysis.extractROIfICs(PatNum, ROIName = 'L1_b3000_NT', ModelNum = ModelNum)
+        fIC_analysis.extractROIfICs(PatNum, ROIName = ROIName, ModelNum = ModelNum)
         
-        print(PatNum)
+        # Append to goodPatNums list
+        goodPatNums.append(PatNum)
+        
+    # If no ROI RTstruct file, or error, remove patient number from list
     except:
-        continue
-    
-sys.exit()  
+        print(f'ROI error for {PatNum}')
+
+   
+PatNums = goodPatNums
+
+
+
 # Calculate median fICs  
-fIC_analysis.avgROIfICs(ROIName = 'L1', ModelNum = ModelNum, avg_type = 'median')
+fIC_analysis.avgROIfICs(PatNums = PatNums, ROIName = 'L1_b3000_NT', ModelNum = ModelNum, avg_type = 'median')
 
 # Apply ROC analysis
-fpr, tpr, thresholds, roc_auc = fIC_analysis.fIC_ROC(ModelNum = ModelNum)
+fpr, tpr, thresholds, roc_auc = fIC_analysis.fIC_ROC( ModelNum = ModelNum)
 
 
 # == Save results

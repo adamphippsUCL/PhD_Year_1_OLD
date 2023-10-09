@@ -1,4 +1,4 @@
-function [scheme, Y, fIC, fEES, fVASC, R] = verdict_Adam(dfolder, output_folder, opts)
+function [scheme, Y, fIC, fEES, fVASC, R, rmse] = verdict_Adam(dfolder, output_folder, opts)
 % VERDICT A wrapper function for VERDICT processing. Intended either
 % for MATLAB directly, or deployed as a Docker container.
 %
@@ -66,5 +66,5 @@ opts.verdictVersion = '1.010 - R20230827' ;
 
 makeDOMCompilable() % Needed for deployed Report Generator
 
-[scheme, Y, fIC, fEES, fVASC, R] = verdict_process_Adam(dfolder, output_folder, opts) ;
+[scheme, Y, fIC, fEES, fVASC, R, rmse] = verdict_process_Adam(dfolder, output_folder, opts) ;
 

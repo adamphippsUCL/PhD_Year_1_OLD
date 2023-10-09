@@ -2,19 +2,25 @@
 
 % Define list of patient numbers
 PatNums = [...
-%     "BAR_003",...
-%     "BAR_004",...
-%     "BAR_005",...
 %     "BAR_006",...
-%     "BAR_009",...
-%     "BAR_004",...    
 %     "BAR_010",...
 %     "BAR_012",...
-    "BAR_028",...
-%     "BAR_018",...
-%     "BAR_020",...
+%     "BAR_019",...
 %     "BAR_023",...
 %     "BAR_025",...
+%     "BAR_030",...
+%     "BAR_033",...
+%     "BAR_034",...
+%     "BAR_035",...
+    "BAR_038",...
+%     "BAR_039",...
+%     "BAR_040",...
+%     "BAR_046",...
+%     "BAR_047",...
+%     "BAR_049",...
+%     "BAR_050",...
+%     "BAR_052"
+
 
     ];
 
@@ -45,6 +51,7 @@ end
 % 
 % %% Model 3: No VASC Reduced Rs [0.1,5.1,10.1,15.1]
 % 
+
 % % Model type
 % ModelType = "Model 3";
 % solver = 'lsqnonneg';
@@ -54,9 +61,9 @@ end
 %     disp(["----------->" PatNum])
 %     VERDICT(PatNum, ModelType, solver = solver);
 % end
-% 
-% %% Model 4: No VASC Reduced Rs [3,6,9,12]
-% 
+
+% % Model 4: No VASC Reduced Rs [3,6,9,12]
+
 % % Model type
 % ModelType = "Model 4";
 % solver = 'lsqnonneg';
@@ -66,7 +73,7 @@ end
 %     disp(["----------->" PatNum])
 %     VERDICT(PatNum, ModelType, solver = solver);
 % end
-% 
+% % 
 % %% Model 5: No VASC Reduced Rs [6,9,12,15]
 % 
 % % Model type
@@ -134,6 +141,47 @@ end
 % 
 % % Model type
 % ModelType = "Model 10";
+% solver = 'lsqnonneg';
+% 
+% % Run VERDICT processing
+% for PatNum = PatNums
+%     disp(["----------->" PatNum])
+%     VERDICT(PatNum, ModelType, solver = solver);
+% end
+
+
+% % Model type
+% ModelType = "Model 11";
+% solver = 'lsqnonneg';
+% 
+% % Run VERDICT processing
+% for PatNum = PatNums
+%     disp(["----------->" PatNum])
+%     VERDICT(PatNum, ModelType, solver = solver);
+% end
+% 
+% % Model type
+% ModelType = "Model 12";
+% solver = 'lsqnonneg';
+% 
+% % Run VERDICT processing
+% for PatNum = PatNums
+%     disp(["----------->" PatNum])
+%     VERDICT(PatNum, ModelType, solver = solver);
+% end
+% 
+% % Model type
+% ModelType = "Model 13";
+% solver = 'lsqnonneg';
+% 
+% % Run VERDICT processing
+% for PatNum = PatNums
+%     disp(["----------->" PatNum])
+%     VERDICT(PatNum, ModelType, solver = solver);
+% end
+% 
+% % Model type
+% ModelType = "Model 14";
 % solver = 'lsqnonneg';
 % 
 % % Run VERDICT processing

@@ -11,6 +11,7 @@ import pandas as pd
 import pickle
 from sklearn.metrics import roc_curve, roc_auc_score
 import SimpleITK as sitk
+from skimage.metrics import mean_squared_error
 
 # Import DICOM from imgtools
 sys.path.insert(0, r'C:\Users\adam\OneDrive - University College London\UCL PhD\MRes Year\Project\MRes_Project\Prostate MRI Project')
@@ -37,21 +38,24 @@ def saveROImask(
         Img_DICOM_path = rf"D:\UCL PhD Imaging Data\INNOVATE\{PatNum}\scans" 
 
         # Find filename for b3000 image
-        b3000_DICOM_fnames = glob.glob(f'{Img_DICOM_path}/*b3000_80/DICOM/*')
+        b3000_DICOM_fnames = glob.glob(f'{Img_DICOM_path}/*b3000_80/DICOM/*.dcm')
         
+        # Test to throw error if empty list
         test_valid = b3000_DICOM_fnames[0]
-        
+ 
     except:
+        
         # Define path to image DICOMs
         Img_DICOM_path = rf"D:\UCL PhD Imaging Data\INNOVATE\{PatNum}" 
 
         # Find filename for b3000 image
-        b3000_DICOM_fnames = glob.glob(f'{Img_DICOM_path}\*b3000_80\DICOM\*')
+        b3000_DICOM_fnames = glob.glob(f'{Img_DICOM_path}\*b3000_80\DICOM\*.dcm')
 
 
     # Test if DICOM MF or SF
     if len(b3000_DICOM_fnames) == 1:
         # MF
+        multiframe = True
         b3000_DICOM_fname = b3000_DICOM_fnames[0]
         b3000dcm = DICOM.MRIDICOM(b3000_DICOM_fname)
         
@@ -66,10 +70,10 @@ def saveROImask(
         
         
     # Create dcm object 
-    b3000dcm = DICOM.MRIDICOM(b3000_DICOM_fname)
     b3000_ImageArray = b3000dcm.constructImageArray()
     b3000_bVals = b3000dcm.DICOM_df['Diffusion B Value'].values
-
+    b0 = b3000_ImageArray[b3000_bVals == 0]
+    
     # Define path to ROI DICOM
     RTStruct_path = f'{INNOVATE_ROIs_path}/{PatNum}'
 
@@ -86,28 +90,58 @@ def saveROImask(
     LesionStructNum = contours.Struct_Name_Num_dict[ROIName]
  
     # Make mask for lesion
-    LesionMask = contours.create_mask(Struct_Num = LesionStructNum, DICOM_fname = b3000_DICOM_fname)
+    LesionMask = contours.create_mask(Struct_Num = LesionStructNum, DICOM_dcm = b3000dcm)
 
     # Remove duplicate spatial slices
     LesionMask = LesionMask[b3000_bVals == 0]
     
-    # print(np.sum(LesionMask, axis = (1,2)))
-
-    # plt.figure()
-    # plt.imshow(LesionMask[4])
-    # plt.figure()
-    # plt.imshow(b3000_ImageArray[4::5][4])
-    # plt.show()
     
-    # Save lesion mask
+    
+    '''New code: accounting for z flips of fIC map'''
+    
+    # == First, load in b0 data from Matlab output
+    
+    # Load .mat file
+    matb0 = loadmat(f'VERDICT outputs/{PatNum}/Model 1/vb0.mat')['vb0']
+    
+    # Permute matlab b0 volume
+    matb0 = np.moveaxis( matb0 , -1, 0)  
+    
+
+    # == Calculate MSE for different relative orientations
+    MSE0 = mean_squared_error(matb0, b0)
+    MSE1 = mean_squared_error(matb0, b0[::-1, : , :])
+    
+    # If MSE0 > MSE1, python b3000 image and mask need to be flipped to match fIC
+    if MSE0 > MSE1:
+        LesionMask = LesionMask[::-1,:,:]
+        b0 = b0[::-1,:,:]
+    else:
+        None
+        
+    
+    # == Save lesion mask
     try:
         os.makedirs(f'{output_path}/{PatNum}')
     except:
         None
+      
+    # Save as npy  
     np.save(f'{output_path}/{PatNum}/{ROIName}.npy', LesionMask)
-                    
+    
+    # Save as mha
+    sitk.WriteImage( sitk.GetImageFromArray(LesionMask), f'{output_path}/{PatNum}/{ROIName}.mha' )
+    
+    # == Save b=0 from b3000 image
+    
+    # Save as npy  
+    np.save(f'{output_path}/{PatNum}/b0.npy', b0)
+    
+    # Save as mha
+    sitk.WriteImage( sitk.GetImageFromArray(b0), f'{output_path}/{PatNum}/b0.mha' )     
  
-saveROImask('BAR_006', 'L1_b3000_NT')
+ 
+saveROImask('BAR_038', 'L1_b3000_NT')
 
 # Function for saving Nifti masks as npy arrays
 def saveNiftimask(
@@ -143,9 +177,17 @@ def extractROIfICs(
     
     # Load fIC array
     fIC = loadmat(f'{VERDICT_output_path}/{PatNum}/Model {ModelNum}/fIC.mat')['fIC']
+    
+    # remove infinities
+    fIC[fIC == np.inf] = 0
+    
+    # Remove nan
+    fIC[np.isnan(fIC)] = 0
+    
     # Permute array axes (account for MATLAB Python differences)
     fIC = np.moveaxis( fIC , -1, 0)   
     
+
     # Load ROI mask
     ROIMask = np.load(f'{ROI_path}/{PatNum}/{ROIName}.npy')
     # Make Bool
@@ -160,10 +202,14 @@ def extractROIfICs(
     except:
         None
         
+    # Save as npy
     np.save(f'{output_path}/{PatNum}/{ROIName}/Model {ModelNum}.npy', ROI_fIC)
     
+    # Save fIC image as mha
+    sitk.WriteImage(sitk.GetImageFromArray(fIC), f'VERDICT outputs/{PatNum}/Model {ModelNum}/fIC.mha')
+    
 
-       
+      
 def readBiopsyResults(
     biopsy_data_xlsx = r'C:\Users\adam\OneDrive - University College London\UCL PhD\PhD Year 1\INNOVATE\INNOVATE patient groups 2.0.xlsx'
 ):
@@ -199,6 +245,7 @@ def readBiopsyResults(
        
 # Function to calculate avg fIC over ROIs
 def avgROIfICs(
+    PatNums, 
     ROIName,
     ModelNum,
     avg_type = 'mean',
@@ -210,8 +257,8 @@ def avgROIfICs(
     fIC_fnames = glob.glob(f'{results_path}/*/{ROIName}/Model {ModelNum}.npy')
     
     # For each file, extract patient number and calculate average fIC
-    PatNums = []
     avgfICs = []
+    thesePatNums = []
     
     for fname in fIC_fnames:
         
@@ -222,9 +269,13 @@ def avgROIfICs(
                                )[0]
                                )[1]
 
-        # Append to list
-        PatNums.append(PatNum)
-        
+        # Check if patient number in PatNums
+        if PatNum not in PatNums:
+            print(PatNum)
+            continue
+        else:
+            thesePatNums.append(PatNum)
+            
         # Load fICs
         fICs = np.load(fname)
         
@@ -240,9 +291,10 @@ def avgROIfICs(
         # Append to list
         avgfICs.append(avg_fIC)
         
-        
+     
+       
     # Create dataframe
-    fIC_DF = pd.DataFrame({'Patient ID': PatNums, 'Avg fIC': avgfICs})
+    fIC_DF = pd.DataFrame({'Patient ID': thesePatNums, 'Avg fIC': avgfICs})
 
     print(fIC_DF)
     # Create directory
@@ -256,7 +308,6 @@ def avgROIfICs(
         pickle.dump(fIC_DF, handle, protocol=pickle.HIGHEST_PROTOCOL)
         
 
-# avgROIfICs(ROIName = 'L1', ModelType = 'No VASC')
         
     
 def fIC_ROC(
